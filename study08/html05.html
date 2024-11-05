@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>부트스트랩 사용하기 5</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-3">이미지 사용하기</h2>
+
+        <div>
+            <h3>이미지 모양</h3>
+            <!--부트스트랩에서 미리 디자인된 이미지 모양을 3가지 제공함-->
+            <!--.rounded : 테두리에 라운드 처리된 이미지-->
+            <!--.rounded-circle : 원형 이미지 사용--> 
+            <!--.img-thumbnail : 썸네일 테두리를 사용한 이미지-->
+            <!--img 태그의 class에 추가하여 사용함-->
+
+            <div class="row">
+                <div class="col-sm">
+                    <img src="../study05/pet/elmobomb.jpg" alt="" class="rounded">
+                </div>
+                <div class="col-sm">
+                    <img src="../study05/pet/elmobomb.jpg" alt="" class="rounded-circle">
+                </div>
+                <div class="col-sm">
+                    <img src="../study05/pet/elmobomb.jpg" alt="" class="img-thumbnail">
+                </div>
+            </div>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>이미지 정렬하기</h3>
+            <!--이미지의 정렬 방법은 기본적으로 float 속성을 사용함-->
+            <!--부트스트랩에서는 float을 사용하기 위한 class를 미리 정의함-->
+            <!--.float-start, .float-end-->
+            <!--부트스트랩에서는 float 사용 후 float 제거를 위한 clear 속성을 미리 정의함-->
+            <!--.clearfix-->
+            <!--float-start, float-end를 사용할 태그의 부모태그에 clearfix를 추가하여 사용함-->
+
+            <div class="clearfix">
+                <h4>왼쪽 정렬</h4>
+                <img src="../study05/pet/mochihamster.jpg" alt="" class="float-start">
+                <img src="../study05/pet/mochihamster.jpg" alt="" class="float-start">
+            </div>
+            <br><br>
+            <div class="clearfix">
+                <h4 class="text-end">오른쪽 정렬</h4>
+                <img src="../study05/pet/hamstergood.jpg" alt="" class="float-end">
+                <img src="../study05/pet/hamstergood.jpg" alt="" class="float-end">
+            </div>
+            <br><br>
+            <div class="clearfix">
+                <h4 class="text-center">양쪽 정렬</h4>
+                <img src="../study05/pet/sadcat.jpg" alt="" class="float-start">
+                <img src="../study05/pet/sadcat.jpg" alt="" class="float-end">
+            </div>
+
+            <br><br>
+            <!--이미지 중앙 정렬하려면 float 속성으로는 불가능함-->
+            <!--img 태그를 display: block으로 설정하고 margin-left와 margin-right를 모두 auto로 설정함-->
+            <!--부투스트랩에서 display와 margin을 모두 재정의 함-->
+            <!--.d-block : display 속성을 block 태그 방식으로 변경-->
+            <!--.mx-auto : margin-left와 margin-right의 속성값을 모두 auto로 변경-->
+
+            <div>
+                <h4 class="text-center">이미지 중앙 정렬</h4>
+                <img src="../study05/pet/sadcat.jpg" alt="" class="d-block mx-auto">
+            </div>
+            <br><br>
+
+            <h4 class="text-center">flex box 사용 시 중앙 정렬</h4>
+            <div class="d-flex justify-content-center">
+                <img src="../study05/pet/sadcat.jpg" alt="" class="">
+            </div>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>반응형 크기 이미지</h3>
+            <!--부트스트랩 사용 시 화면의 크기에 따라 이미지의 크기를 자동으로 조절하도록 할 수 있음-->
+            <!--.img-fluid : img 태그의 class에 추가 시 부모 태그의 크기에 맞게 이미지의 크기를 조절함-->
+
+            <div>
+                <img src="../study05/images/KakaoTalk_20240429_153143137.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

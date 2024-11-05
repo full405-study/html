@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>오디오 비디오 삽입하기</title>
+    </head>
+    <body>
+        <div>
+        <h3>object 태그 사용하기</h3>
+        <object width="900" height="800" data="04.pdf.pdf"></object>
+
+        <br><hr><br>
+
+        <h3>embed 태그 사용하기</h3>
+        <embed src="winner.mp3">
+        <iframe  width="445" height="791" src="https://www.youtube.com/embed/Ehzy5Ss_M_s" title="30초만에 20가지의 표정을 보여주는 표정장인 츠키 #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br><hr><br>
+
+        <h3>audio 태그 사용하기</h3>
+        <audio src="high.mp4" controls></audio>
+        <br><hr><br>
+
+        <h3>video 태그 사용하기</h3>
+        <video src="high.mp4" controls poster="pet/elmobomb.jpg" style="width: 500px;"></video>
+        <br><hr><br>
+
+        <h3>video파일 자동 재생시키기</h3>
+        <video src="flower.mp4" width="640" muted autoplay loop></video>
+        <h3>일정</h3>
+
+        </div>
+
+        <div>
+            <h3>a(하이퍼링크) 태그 사용하기</h3>
+            <!--<a> : 다른 페이지 혹은 다른 파일로 이동하는 태그-->
+            <!--<target> : a 태그를 사용하여 다른 페이지 혹은 다른 파일로 이동 시 어떻게 해당 페이지 및 파일을 열 것인지 지정하는 속성-->
+            <!--_self(기본값) : 현재 탭 혹은 현재 창에서 지정한 페이지 및 파일을 오픈, 주로 사용-->
+            <!--_blank : 새로운 탭 혹은 새로운 창을 사용하여 지정한 페이지 및 파일을 오픈, 주로 사용-->
+            <!--_parent : 부모 창을 사용하여 지정한 페이지 및 파일을 오픈-->
+            <!--_top : 창 전체에서 지정한 페이지 및 파일을 오픈-->
+            <a href="http://www.naver.com" target="_blank">네이버 홈페이지</a><br>
+            <a href="http://www.daum.net" target="_parent">다음 홈페이지</a><br>
+            <a href="http://www.google.co.kr" target="_top">구글 홈페이지</a><br>
+        </div>
+    </body>
+</html>

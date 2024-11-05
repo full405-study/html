@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 사용하기 15</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Modal</h2>
+
+    <div>
+      <h3>기본 모달창 사용하기</h3>
+      <!-- 현재의 웹 브라우저는 팝업창을 표시하는 것을 제한하고 있음 -->
+      <!-- 모달창은 부트스트랩에서 제공하는 UI로 특정 영역을 숨기고 있다가 
+       이벤트에 의해서 해당 영역을 화면에 출력시키는 형태로 팝업창과 비슷한 기능을 제공함 -->
+      <!-- button 태그(다른 태그로 대체 가능)와 div 태그로 구성되어 있으며, 버튼 이벤트 발생 시 
+           display : none 으로 숨겨진 div 태그 영역을 display : block 으로 변경하여 화면에 출력함 -->
+      <!-- button 태그에 사용자 속성 data-bs-toggle="modal" 을 추가함 --> 
+      <!-- button 태그에 사용자 속성 data-bs-target을 추가하고 팝업창으로 사용할 영역의 id 속성값을 지정함 -->
+      <!-- 팝업창으로 사용할 div 태그에 id 속성을 사용하고 이름을 설정, class에 .modal 을 추가하여 사용 -->
+      <!-- .modal class를 사용한 div 태그의 자식 태그로 div를 추가하고, class에 .modal-dialog 를 추가함 -->
+      <!-- .modal-dialog class를 사용한 div 태그의 자식 태그로 div를 추가하고 class에 .modal-content 를 추가함 -->
+      <!-- .modal-content class를 사용한 div 태그의 자식 태그로 .modal-header, .modal-body, .modal-footer 3가지
+            영역의 div를 추가해서 사용함 -->
+      <!-- .modal-header, .modal-body 안에서 제목을 사용 시 class에 .modal-title class를 추가하여 사용 -->
+      <!-- 닫기 버튼을 추가하기 위해서 button 태그의 class에 .btn-close 를 추가하고 
+           사용자 속성 data-bs-dismiss="modal"을 추가하여 사용함 -->
+      
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">
+        클릭 시 모달 창 열기
+      </button>
+
+      <div class="modal" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">모달창</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- modal body -->
+            <div class="modal-body">
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>모달 창 애니메이션, 모달 창 크기</h3>
+      <!-- 모달창에 애니메이션을 추가 시 .modal class를 사용한 div에 .fade 를 추가함 -->
+      <!-- 모달창의 크기는 총 5가지로 .modal-sm, .modal-lg, .modal-xl, .modal-fullscreen 을 
+           .modal-dialog class를 사용한 div의 class에 추가하여 사용함 -->
+      <!-- .modal-fullscreen 사용 시 반응형 웹 크기를 지원함 -->
+      <!-- .modal-fullscreen-{반응형크기}-down class를 사용하여, 지정된 크기 이상의 화면일 때는 
+            기본 modal창 크기의 모달 창이 출력되며, 화면이 지정한 크기보다 작을 경우 전체화면 모달 창이 출력됨 -->
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal-sm">
+        클릭 시 작은 모달 창 열기
+      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal-df">
+        클릭 시 기본 모달 창 열기
+      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal-lg">
+        클릭 시 큰 모달 창 열기
+      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal-xl">
+        클릭 시 더 큰 모달 창 열기
+      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal-full">
+        클릭 시 전체 크기 모달 창 열기
+      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal-full-md">
+        클릭 시 반응형 모달 창 열기
+      </button>
+
+      <div class="modal fade" id="mymodal-sm">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">작은 모달창</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- modal body -->
+            <div class="modal-body">
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="mymodal-df">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">기본 모달창</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- modal body -->
+            <div class="modal-body">
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="mymodal-lg">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">큰 모달창</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- modal body -->
+            <div class="modal-body">
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="mymodal-xl">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">더 큰 모달창</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- modal body -->
+            <div class="modal-body">
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="mymodal-full">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">전체 화면 모달창</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- modal body -->
+            <div class="modal-body">
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="mymodal-full-md">
+        <div class="modal-dialog modal-fullscreen-md-down">
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">반응형 모달창</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- modal body -->
+            <div class="modal-body">
+              <p>모달창의 body 부분입니다.</p>
+              <p>modal-fullscreen-md-down 를 사용하여 화면의 크기가 768px 보다 크면 기본 모달창</p>
+              <p>화면 크기가 768px 보다 작으면 전체 화면 모달창 출력</p>
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>모달 창 화면 중앙에 표시, 모달 창 스크롤 사용</h3>
+      <!-- 부트스트랩의 모달창은 기본적으로 화면 상단 중앙에 표시됨 -->
+      <!-- .modal-dialog class 를 사용하는 div의 class에 .modal-dialog-centered 를 추가하면 모달 창을 화면 중앙에 표시함 -->
+      <!-- 부트스트랩의 모달창의 내용이 많을 경우 화면 전체의 스크롤을 사용해야 함 -->
+      <!-- .modal-dialog class 를 사용하는 div의 class에 .modal-dialog-scrollable 을 추가하면 
+            모달 창 내부에 스크롤이 추가되어 모달 창 안의 내용만 스크롤 할 수 있음 -->
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal-center">
+        중앙에 표시되는 모달 창
+      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal-basic">
+        내용이 많은 기본 모달 창
+      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal-scroll">
+        내용이 많은 스크롤 모달 창
+      </button>
+
+      <div class="modal" id="mymodal-center">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">중앙에 표시되는 모달창</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- modal body -->
+            <div class="modal-body">
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="mymodal-basic">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">내용이 많은 기본 모달창</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- modal body -->
+            <div class="modal-body">
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="mymodal-scroll">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">내용이 많은 스크롤 모달창</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- modal body -->
+            <div class="modal-body">
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+              <p>모달창의 body 부분입니다.</p>
+              <p>원하는 내용을 입력하면 됩니다.</p>
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

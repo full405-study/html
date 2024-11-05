@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div01 a:link {
+            font-size: 2em;
+            color: dodgerblue;
+        }
+
+        #div01 a:visited {
+            font-size: 2em;
+            color: hotpink;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #div02 button, #div02 input {
+            min-height: 50px;
+            min-width: 150px;
+            padding: 16px;
+            margin: 5px;
+            font-size: 1.5em;
+        }
+
+        #btn-click:active {
+            background-color: crimson;
+            border: 3px solid black;
+        }
+
+        #btn-hover:hover {
+            background-color: deepskyblue;
+            width: 200px;
+        }
+
+        #input-focus:focus {
+            background-color: khaki;
+            border: 5px dashed gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h2>가상 클래스 선택자</h2>
+
+        <div id="div01">
+            <h3>:link, :visited</h3>
+
+            <div>
+                <a href="http://www.naver.com" target="_blank">네이버 홈페이지</a><br>
+                <a href="http://www.daum.net" target="_blank">다음 홈페이지</a><br>
+                <a href="http://www.google.co.kr" target="_blank">구글 코리아 홈페이지</a>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div id="div02">
+            <h3>:active, :hover, :focus</h3>
+
+            <div>
+                <button type="button" id="btn-click">클릭 시 변경</button><br>
+                <button type="button" id="btn-hover">마우스를 올리면 변경</button><br>
+                <input type="text" id="input-focus" placeholder="포커스가 주어지면 변경">
+            </div>
+        </div>
+    </div>
+
+    <br>
+</body>
+</html>

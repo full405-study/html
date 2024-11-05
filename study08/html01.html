@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>부트스트랩을 사용한 flex box</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <script src="../js/bootstrap.bundle.js"></script>
+
+    <style>
+      .flex-container {
+        border: 1px solid #222;
+        background-color: #eee;
+        margin-bottom: 30px;
+        text-align: center;
+        color: white;
+        display: flex;
+      }
+
+      .box {
+        padding: 5px 45px;
+        margin: 5px;
+      }
+
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Flex box : 부트스트랩에서는 CSS의 flex box를 쉽게 사용할 수 있도록 미리 class를 선언해 놓음 -->
+
+    <div id="div01">
+      <h2 class="text-center">flex box 사용하기</h2>
+
+      <h3>css를 사용하여 flex box 사용하기</h3>
+      <div class="flex-container">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>부트스트랩을 사용하여 flex box 사용하기</h3>
+      <!-- CSS에서 flex box 를 사용 시 display: flex를 선언해야 함 -->
+      <!-- 부트스트랩에서는 display 속성을 d 라는 이름으로 선언해 놓음 -->
+      <!-- d-{속성값} 형태로 입력함, flex box 사용 시 d-flex 라고 사용하면 됨 -->
+      <div
+        class="d-flex border border-secondary bg-secondary bg-opacity-25 text-center text-white"
+      >
+        <div class="px-5 py-1 m-1 bg-danger">1</div>
+        <div class="px-5 py-1 m-1 bg-success">2</div>
+        <div class="px-5 py-1 m-1 bg-primary">3</div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>d-flex, d-inline-flex</h3>
+      <!-- 부트스트랩에서 flex box를 d-flex와 d-inline-flex 두 가지를 제공함 -->
+      <h4>d-flex</h4>
+      <div class="d-flex p-3 bg-secondary text-white">
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+      <h4>d-inline-flex</h4>
+      <div class="d-inline-flex p-3 bg-secondary text-white mb-3">
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>direction 사용하기</h3>
+      <!-- 부트스트랩에서 flex box의 direction을 미리 class 로 선언해 놓음 -->
+      <!-- .flex-row, flex-row-revers, .flex-column, flex-column-revers -->
+      <!-- 부모 태그에 d-flex와 함께 사용 -->
+      <h4>flex-row</h4>
+      <div class="d-flex flex-row bg-secondary text-white p-3 mb-3">
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+      <h4>flex-row-reverse</h4>
+      <div class="d-flex flex-row-reverse bg-secondary text-white p-3 mb-3">
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+      <h4>flex-column</h4>
+      <div class="d-flex flex-column bg-secondary text-white p-3 mb-3">
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+      <h4>flex-column-reverse</h4>
+      <div class="d-flex flex-column-reverse bg-secondary text-white p-3 mb-3">
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>flexbox 사용 시 가로 정렬</h3>
+      <!-- 부트스트랩에서 flex box 사용 시
+         자식 태그를 가로로 정렬하기 위한 class 를 미리 정의해 둠 -->
+      <!-- .justify-content-start, .justify-content-end, .justify-content-center, 
+        .justify-content-between, .justify-content-around -->
+      <!-- d-flex와 함께 사용해야 함 -->
+      <h4>justify-content-start</h4>
+      <div
+        class="d-flex justify-content-start bg-secondary text-white p-3 mb-3"
+      >
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+      <h4>justify-content-end</h4>
+      <div class="d-flex justify-content-end bg-secondary text-white p-3 mb-3">
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+      <h4>justify-content-center</h4>
+      <div
+        class="d-flex justify-content-center bg-secondary text-white p-3 mb-3"
+      >
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+      <h4>justify-content-around</h4>
+      <div
+        class="d-flex justify-content-around bg-secondary text-white p-3 mb-3"
+      >
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+      <h4>justify-content-between</h4>
+      <div
+        class="d-flex justify-content-between bg-secondary text-white p-3 mb-3"
+      >
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+      <h4>justify-content-evenly</h4>
+      <div
+        class="d-flex justify-content-evenly bg-secondary text-white p-3 mb-3"
+      >
+        <div class="p-2 bg-info">flex item1</div>
+        <div class="p-2 bg-warning">flex item2</div>
+        <div class="p-2 bg-primary">flex item3</div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>flex box 사용 시 세로 정렬하기 1(align-content)</h3>
+      <!-- 부트스트랩에서 flex box 사용 시 자식 태그를
+        세로로 정렬하기 위한 방법 중 align-content 속성을 미리 정의함 -->
+      <!-- align-content 는 자식 태그가 2라인 이상 표시될 경우
+        화면에 세로로 어떻게 정렬할 것인지를 설정함 -->
+      <!-- .align-content-start, .align-content-center, .align-content-end
+        .align-content-around, .align-content-stretch -->
+      <!-- d-flex, flex-wrap과 함께 사용해야 함 -->
+
+      <h4>align-content-start(기본값)</h4>
+      <div
+        class="d-flex flex-wrap align-content-start bg-secondary text-white mb-3"
+        style="height: 300px"
+      >
+        <div class="p-2 border">flex item1</div>
+        <div class="p-2 border">flex item2</div>
+        <div class="p-2 border">flex item3</div>
+        <div class="p-2 border">flex item4</div>
+        <div class="p-2 border">flex item5</div>
+        <div class="p-2 border">flex item6</div>
+        <div class="p-2 border">flex item7</div>
+        <div class="p-2 border">flex item8</div>
+        <div class="p-2 border">flex item9</div>
+        <div class="p-2 border">flex item10</div>
+        <div class="p-2 border">flex item11</div>
+        <div class="p-2 border">flex item12</div>
+        <div class="p-2 border">flex item13</div>
+        <div class="p-2 border">flex item14</div>
+        <div class="p-2 border">flex item15</div>
+        <div class="p-2 border">flex item16</div>
+        <div class="p-2 border">flex item17</div>
+        <div class="p-2 border">flex item18</div>
+        <div class="p-2 border">flex item19</div>
+        <div class="p-2 border">flex item20</div>
+      </div>
+      <h4>align-content-center</h4>
+      <div
+        class="d-flex flex-wrap align-content-center bg-secondary text-white mb-3"
+        style="height: 300px"
+      >
+        <div class="p-2 border">flex item1</div>
+        <div class="p-2 border">flex item2</div>
+        <div class="p-2 border">flex item3</div>
+        <div class="p-2 border">flex item4</div>
+        <div class="p-2 border">flex item5</div>
+        <div class="p-2 border">flex item6</div>
+        <div class="p-2 border">flex item7</div>
+        <div class="p-2 border">flex item8</div>
+        <div class="p-2 border">flex item9</div>
+        <div class="p-2 border">flex item10</div>
+        <div class="p-2 border">flex item11</div>
+        <div class="p-2 border">flex item12</div>
+        <div class="p-2 border">flex item13</div>
+        <div class="p-2 border">flex item14</div>
+        <div class="p-2 border">flex item15</div>
+        <div class="p-2 border">flex item16</div>
+        <div class="p-2 border">flex item17</div>
+        <div class="p-2 border">flex item18</div>
+        <div class="p-2 border">flex item19</div>
+        <div class="p-2 border">flex item20</div>
+      </div>
+      <h4>align-content-end</h4>
+      <div
+        class="d-flex flex-wrap align-content-end bg-secondary text-white mb-3"
+        style="height: 300px"
+      >
+        <div class="p-2 border">flex item1</div>
+        <div class="p-2 border">flex item2</div>
+        <div class="p-2 border">flex item3</div>
+        <div class="p-2 border">flex item4</div>
+        <div class="p-2 border">flex item5</div>
+        <div class="p-2 border">flex item6</div>
+        <div class="p-2 border">flex item7</div>
+        <div class="p-2 border">flex item8</div>
+        <div class="p-2 border">flex item9</div>
+        <div class="p-2 border">flex item10</div>
+        <div class="p-2 border">flex item11</div>
+        <div class="p-2 border">flex item12</div>
+        <div class="p-2 border">flex item13</div>
+        <div class="p-2 border">flex item14</div>
+        <div class="p-2 border">flex item15</div>
+        <div class="p-2 border">flex item16</div>
+        <div class="p-2 border">flex item17</div>
+        <div class="p-2 border">flex item18</div>
+        <div class="p-2 border">flex item19</div>
+        <div class="p-2 border">flex item20</div>
+      </div>
+      <h4>align-content-around</h4>
+      <div
+        class="d-flex flex-wrap align-content-around bg-secondary text-white mb-3"
+        style="height: 300px"
+      >
+        <div class="p-2 border">flex item1</div>
+        <div class="p-2 border">flex item2</div>
+        <div class="p-2 border">flex item3</div>
+        <div class="p-2 border">flex item4</div>
+        <div class="p-2 border">flex item5</div>
+        <div class="p-2 border">flex item6</div>
+        <div class="p-2 border">flex item7</div>
+        <div class="p-2 border">flex item8</div>
+        <div class="p-2 border">flex item9</div>
+        <div class="p-2 border">flex item10</div>
+        <div class="p-2 border">flex item11</div>
+        <div class="p-2 border">flex item12</div>
+        <div class="p-2 border">flex item13</div>
+        <div class="p-2 border">flex item14</div>
+        <div class="p-2 border">flex item15</div>
+        <div class="p-2 border">flex item16</div>
+        <div class="p-2 border">flex item17</div>
+        <div class="p-2 border">flex item18</div>
+        <div class="p-2 border">flex item19</div>
+        <div class="p-2 border">flex item20</div>
+      </div>
+      <h4>align-content-stretch</h4>
+      <div
+        class="d-flex flex-wrap align-content-stretch bg-secondary text-white mb-3"
+        style="height: 300px"
+      >
+        <div class="p-2 border">flex item1</div>
+        <div class="p-2 border">flex item2</div>
+        <div class="p-2 border">flex item3</div>
+        <div class="p-2 border">flex item4</div>
+        <div class="p-2 border">flex item5</div>
+        <div class="p-2 border">flex item6</div>
+        <div class="p-2 border">flex item7</div>
+        <div class="p-2 border">flex item8</div>
+        <div class="p-2 border">flex item9</div>
+        <div class="p-2 border">flex item10</div>
+        <div class="p-2 border">flex item11</div>
+        <div class="p-2 border">flex item12</div>
+        <div class="p-2 border">flex item13</div>
+        <div class="p-2 border">flex item14</div>
+        <div class="p-2 border">flex item15</div>
+        <div class="p-2 border">flex item16</div>
+        <div class="p-2 border">flex item17</div>
+        <div class="p-2 border">flex item18</div>
+        <div class="p-2 border">flex item19</div>
+        <div class="p-2 border">flex item20</div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>flex box 에서 세로 정렬하기 2 (align-items)</h3>
+      <!-- 부트스트랩에서 flex box 사용 시 자식 태그를
+        세로로 정렬하기 위한 방법중 align-items를 미리 정의함 -->
+      <!-- .align-items-start, .align-items-center, .align-items-end,
+            .align-items-baseline, .align-items-stretch(기본값) -->
+      <!-- d-flex 와 함께 사용해야 함 -->
+      <!-- align-items는 한줄일때 쓰는것 -->
+      <!-- align-content는 두줄이상일때 쓰는것 -->
+
+      <h4>align-items-start</h4>
+      <div
+        class="d-flex align-items-start bg-secondary text-white mb-3"
+        style="height: 300px"
+      >
+        <div class="p-2 border">flex iten1</div>
+        <div class="p-2 border">flex iten2</div>
+        <div class="p-2 border">flex iten3</div>
+        <div class="p-2 border">flex iten4</div>
+      </div>
+      <h4>align-items-center</h4>
+      <div
+        class="d-flex align-items-center bg-secondary text-white mb-3"
+        style="height: 300px"
+      >
+        <div class="p-2 border">flex iten1</div>
+        <div class="p-2 border">flex iten2</div>
+        <div class="p-2 border">flex iten3</div>
+        <div class="p-2 border">flex iten4</div>
+      </div>
+      <h4>align-items-end</h4>
+      <div
+        class="d-flex align-items-end bg-secondary text-white mb-3"
+        style="height: 300px"
+      >
+        <div class="p-2 border">flex iten1</div>
+        <div class="p-2 border">flex iten2</div>
+        <div class="p-2 border">flex iten3</div>
+        <div class="p-2 border">flex iten4</div>
+      </div>
+      <h4>align-items-baseline</h4>
+      <div
+        class="d-flex align-items-baseline bg-secondary text-white mb-3"
+        style="height: 300px"
+      >
+        <div class="p-2 border" style="font-size: 1.2em">flex iten1</div>
+        <div class="p-2 border" style="font-size: 2em">flex iten2</div>
+        <div class="p-2 border" style="font-size: 1.5em">flex iten3</div>
+        <div class="p-2 border" style="font-size: 3em">flex iten4</div>
+      </div>
+      <h4>align-items-stretch(기본값)</h4>
+      <div
+        class="d-flex align-items-stretch bg-secondary text-white mb-3"
+        style="height: 300px"
+      >
+        <div class="p-2 border">flex iten1</div>
+        <div class="p-2 border">flex iten2</div>
+        <div class="p-2 border">flex iten3</div>
+        <div class="p-2 border">flex iten4</div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>flex box 에서 세로 정렬하기 3(align-self)</h3>
+      <!-- 부트스트랩에서 flex box 사용 시 자식 태그를
+    세로로 정렬하는 방법 중 align-self를 미리 정의함 -->
+      <!-- .align-self-start, .align-self-conter, .align-self-end
+         .align-self-baseline, .align-self-stretch(기본값) -->
+      <!-- d-flex의 자식 태그에 사용해야 함 -->
+      <h4>align-self-start</h4>
+      <div
+      class="d-flex align-items-center bg-secondary text-white mb-3"
+      style="height: 300px"
+    >
+      <div class="p-2 border">flex item1</div>
+      <div class="p-2 border align-self-start">flex item2</div>
+      <div class="p-2 border">flex item3</div>
+      <div class="p-2 border">flex item4</div>
+    </div>
+    <h4>align-self-center</h4>
+    <div
+    class="d-flex align-items-start bg-secondary text-white mb-3"
+    style="height: 300px"
+  >
+    <div class="p-2 border">flex item1</div>
+    <div class="p-2 border align-self-center">flex item2</div>
+    <div class="p-2 border">flex item3</div>
+    <div class="p-2 border">flex item4</div>
+  </div>
+  <h4>align-self-end</h4>
+  <div
+  class="d-flex align-items-center bg-secondary text-white mb-3"
+  style="height: 300px"
+>
+  <div class="p-2 border">flex item1</div>
+  <div class="p-2 border align-self-end">flex item2</div>
+  <div class="p-2 border">flex item3</div>
+  <div class="p-2 border">flex item4</div>
+</div>
+<h4>align-self-baseline</h4>
+<div
+class="d-flex align-items-center bg-secondary text-white mb-3"
+style="height: 300px"
+>
+<div class="p-2 border">flex item1</div>
+<div class="p-2 border align-self-baseline">flex item2</div>
+<div class="p-2 border">flex item3</div>
+<div class="p-2 border">flex item4</div>
+</div>
+<h4>align-self-stretch</h4>
+<div
+class="d-flex align-items-center bg-secondary text-white mb-3"
+style="height: 300px"
+>
+<div class="p-2 border">flex item1</div>
+<div class="p-2 border align-self-stretch">flex item2</div>
+<div class="p-2 border">flex item3</div>
+<div class="p-2 border">flex item4</div>
+</div>
+
+<br><hr><br>
+
+<h3>부모의 최대 너비보다 자식 태그들의 총 너비가 클 경우 표시 방식, flex-wrap</h3>
+<!-- 부트스트랩에서 flex box 사용 시 부모 태그의 최대 너비보다 자식 태그들의
+    총 너비가 더 클 경우 자동 줄바꿈을 위한 flex-wrap 속성을 미리 정의함 -->
+    <!-- .flex-nowrap, .flex-wrap, .flex-wrap-reverse -->
+    <!-- d-flex와 함께 사용함 -->
+    
+    <h4>flex-nowrap(기본값)</h4>
+    <div class="d-flex flex-nowrap bg-secondary text-white mb-3">
+<div class="p-2 border">flex item1</div>
+<div class="p-2 border">flex item2</div>
+<div class="p-2 border">flex item3</div>
+<div class="p-2 border">flex item4</div>
+<div class="p-2 border">flex item5</div>
+<div class="p-2 border">flex item6</div>
+<div class="p-2 border">flex item7</div>
+<div class="p-2 border">flex item8</div>
+<div class="p-2 border">flex item9</div>
+<div class="p-2 border">flex item10</div>
+<div class="p-2 border">flex item11</div>
+<div class="p-2 border">flex item12</div>
+<div class="p-2 border">flex item13</div>
+<div class="p-2 border">flex item14</div>
+<div class="p-2 border">flex item15</div>
+<div class="p-2 border">flex item16</div>
+<div class="p-2 border">flex item17</div>
+<div class="p-2 border">flex item18</div>
+<div class="p-2 border">flex item19</div>
+<div class="p-2 border">flex item20</div>
+    </div>
+    <h4>flex-wrap</h4>
+    <div class="d-flex flex-wrap bg-secondary text-white mb-3">
+<div class="p-2 border">flex item1</div>
+<div class="p-2 border">flex item2</div>
+<div class="p-2 border">flex item3</div>
+<div class="p-2 border">flex item4</div>
+<div class="p-2 border">flex item5</div>
+<div class="p-2 border">flex item6</div>
+<div class="p-2 border">flex item7</div>
+<div class="p-2 border">flex item8</div>
+<div class="p-2 border">flex item9</div>
+<div class="p-2 border">flex item10</div>
+<div class="p-2 border">flex item11</div>
+<div class="p-2 border">flex item12</div>
+<div class="p-2 border">flex item13</div>
+<div class="p-2 border">flex item14</div>
+<div class="p-2 border">flex item15</div>
+<div class="p-2 border">flex item16</div>
+<div class="p-2 border">flex item17</div>
+<div class="p-2 border">flex item18</div>
+<div class="p-2 border">flex item19</div>
+<div class="p-2 border">flex item20</div>
+    </div>
+    <h4>flex-reverse</h4>
+    <div class="d-flex flex--reverse bg-secondary text-white mb-3">
+<div class="p-2 border">flex item1</div>
+<div class="p-2 border">flex item2</div>
+<div class="p-2 border">flex item3</div>
+<div class="p-2 border">flex item4</div>
+<div class="p-2 border">flex item5</div>
+<div class="p-2 border">flex item6</div>
+<div class="p-2 border">flex item7</div>
+<div class="p-2 border">flex item8</div>
+<div class="p-2 border">flex item9</div>
+<div class="p-2 border">flex item10</div>
+<div class="p-2 border">flex item11</div>
+<div class="p-2 border">flex item12</div>
+<div class="p-2 border">flex item13</div>
+<div class="p-2 border">flex item14</div>
+<div class="p-2 border">flex item15</div>
+<div class="p-2 border">flex item16</div>
+<div class="p-2 border">flex item17</div>
+<div class="p-2 border">flex item18</div>
+<div class="p-2 border">flex item19</div>
+<div class="p-2 border">flex item20</div>
+    </div>
+
+    <br><hr><br>
+
+    <h3>플렉스 박스 사용 시 부모 태그의 크기만큼 자식 태그의 너비를 채우기</h3>
+    <!-- 부트스트랩에서 flex box 사용 시 자식 태그의 너비를
+        부모 태그의 크기만큼 채울 수있도록 미리 정의함 -->
+        <!-- .flex-fill : d-flex의 자식 태그에 각각 사용 시
+            동일한 너비로 부모 태그의 전체 너비를 채움 -->
+        <!-- .flex-grow-1 : d-flex 의 자식 태그 중 하나에
+            사용하여 부모 태그의 나머지 너비를 모두 채움 -->
+        <!-- d-flex의 자식 태그에 사용함 -->
+        
+<h4>flex-fill</h4>
+<div class="d-flex flex--reverse bg-secondary text-white mb-3">
+    <div class="p-2 border flex-fill">flex item1</div>
+    <div class="p-2 border flex-fill">flex item2</div>
+    <div class="p-2 border flex-fill">flex item3</div>
+    </div>
+    <h4>flex-grow-1</h4>
+<div class="d-flex flex--reverse bg-secondary text-white mb-3">
+    <div class="p-2 border">flex item1</div>
+    <div class="p-2 border">flex item2</div>
+    <div class="p-2 border flex-grow-1">flex item3</div>
+    </div>
+
+    <br><hr><br>
+
+    <h3>플렉스 박스 사용 시 자식 태그의 순서 지정하기</h3>
+    <!-- 부트스트랩에서 flex box 사용 시 자식 태그의
+        정렬 순서를 직접 지정할 수 있도록 미리 정의함 -->
+        <!-- .order-{0~5}까지 입력 가능 -->
+        <!-- d-flex의 자식 태그에 사용함 -->
+        <h4>순서 지정 안함</h4>
+<div class="d-flex flex--reverse bg-secondary text-white mb-3">
+    <div class="p-2 border">flex item1</div>
+    <div class="p-2 border">flex item2</div>
+    <div class="p-2 border">flex item3</div>
+    <div class="p-2 border">flex item4</div>
+    <div class="p-2 border">flex item5</div>
+    </div>
+    <h4>order 사용</h4>
+    <div class="d-flex flex--reverse bg-secondary text-white mb-3">
+        <div class="p-2 border order-4">flex item1</div>
+        <div class="p-2 border order-0">flex item2</div>
+        <div class="p-2 border order-2">flex item3</div>
+        <div class="p-2 border order-3">flex item4</div>
+        <div class="p-2 border order-1">flex item5</div>
+        </div>
+        </div>
+  </body>
+</html>

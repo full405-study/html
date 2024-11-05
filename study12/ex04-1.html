@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 UI 그리기 4-1</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <h2 class="mt-2">W3.CSS Login Modal</h2>
+    <button type="button" class="btn btn-lg btn-success rounded-0 mt-2" data-bs-toggle="modal" data-bs-target="#exmo">
+      Login
+    </button>
+
+    <div class="modal fade" id="exmo">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0">
+          <div class="d-flex justify-content-end m-3">
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="d-flex justify-content-center">
+            <img src="../study12/images/img_avatar4.png" alt="" class="rounded-circle w-25">
+          </div>
+          <div class="modal-body">
+            <div class="my-3">
+              <label for="id" class="form-label fw-bold">Username</label>
+              <input type="text" class="form-control" id="id" name="userID" placeholder="Enter Username">
+            </div>
+            <div class="my-3">
+              <label for="pw" class="form-label fw-bold">Password</label>
+              <input type="password" class="form-control" id="pw" name="userPW" placeholder="Enter Password">
+            </div>
+            <div class="my-3">
+              <button type="submit" class="btn btn-success w-100 rounded-0">Login</button>
+            </div>
+            <div class="my-3 form-check">
+              <input type="checkbox" class="form-check-input " id="remember" name="remember" checked>
+              <label for="remember" class="form-check-label">Remember me</label>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-between bg-secondary-subtle border-secondary-subtle">
+            <button type="button" class="btn btn-danger rounded-0" data-bs-dismiss="modal">Cancel</button>
+            <span>Forget <a href="#" class="link-dark">password?</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

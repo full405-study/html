@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 사용하기 19</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>오프 더 캔버스</h2>
+
+    <div>
+      <h3>기본 오프더캔버스</h3>
+      <!-- 오프더캔버스는 부트스트랩의 모달창과 동일한 형태이나 사이드바로 동작하는 것을 말함 -->
+      <!-- 모달창과 비슷한 형태이기 때문에 미리 출력될 영역을 지정하고, 이벤트를 통하여 해당 영역을 출력함 -->
+      <!-- 부모 태그로 div를 사용하고, class에 .offcanvas, .offcanvas-{방향} 을 추가하여 사용함 -->
+      <!-- 부모 태그인 div에 id 속성을 추가하여 버튼 태그의 사용자 속성인 data-bs-target과 연동함 -->
+      <!-- 부모 태그인 div의 자식 태그로 class를 .offcanvas-header 를 사용하는 헤더 영역과, 
+           class를 .offcanvas-body 를 사용하는 바디 영역으로 나누어짐 -->
+      <!-- .offcanvas-header 를 사용한 div 태그를 사용하고, 자식 태그로 텍스트를 표시하는 태그와 버튼 태그를 추가함 -->
+      <!-- 버튼 태그의 class에 .btn-close 를 추가하고, 사용자 속성 data-bs-dismiss="offcanvas" 를 
+           추가하여 오프더캔버스를 닫기 위한 버튼으로 사용함 -->
+      <!-- .offcanvas-body 를 사용한 div 태그의 자식 태그로 각종 텍스트나 메뉴를 표시할 태그를 추가하여 사용함-->
+      <!-- 제목을 표시할 태그에는 class에 .offcanvas-title 을 추가하여 사용함 -->
+      <!-- 오프더캔버스를 출력할 버튼 태그에 사용자 속성 data-bs-toggle="offcanvas" 와 data-bs-target 을 추가하고
+           data-bs-target 속성에 오프더캔버스의 id 속성값을 연동함 -->
+      
+      <div class="offcanvas offcanvas-start" id="myoff">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">오프더캔버스</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>메뉴 1</p>
+          <p>메뉴 2</p>
+          <p>메뉴 3</p>
+          <p>메뉴 4</p>
+          <button type="button" class="btn btn-success">버튼</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">닫기</button>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info" data-bs-toggle="offcanvas" data-bs-target="#myoff">
+        오프더캔버스 열기
+      </button>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>오프더캔버스 방향, 반응형 크기, 시작부터 열고 있기, 오프더캔버스 사용 시 스크롤 설정, 
+          오프더캔버스 사용 시 기존화면 사용 못하게 하기</h3>
+      <!-- 오프더캔버스를 사용하는 div에 .offcanvas-{방향} 을 추가하여 오프더캔버스가 표시되는 위치 변경 가능 -->
+      <!-- 오프더캔버스 사용 시 .offcanvas 대신 .offcanvas-{반응형크기} 를 사용하여 
+           반응형 화면 크기에 따라 변경되는 오프더캔버스를 사용할 수 있음 -->
+      <!-- 오프더캔버스 사용 시 처음부터 메뉴를 열고 있어야 하는 경우 .show 를 추가하여 사용 -->
+      <!-- 오프더캔버스를 사용하는 div에 사용자 속성 data-bs-scroll 을 추가하여 
+           trul/false로 설정하여 오프더캔버스가 출력된 후 화면의 스크롤 기능을 설정할 수 있음-->
+      <!-- 오프더캔버스를 사용하는 div에 사용자 속성 data-bs-backdrop="static" 을 추가하여 
+           오프더캔버스가 출력된 후 기존 화면을 사용할 수 없도록 함 -->
+      
+      <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#myoff-start">왼쪽 출력</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#myoff-end">오른쪽 출력</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#myoff-top">상단 출력</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#myoff-bottom">하단 출력</button>
+
+      <div class="offcanvas offcanvas-start show" id="myoff-start">
+        <div class="offcanvas-header">
+          <h1>왼쪽 출력</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>왼쪽 출력</p>
+          <p>왼쪽 출력</p>
+          <p>왼쪽 출력</p>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" id="myoff-end">
+        <div class="offcanvas-header">
+          <h1>오른쪽 출력</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>오른쪽 출력</p>
+          <p>오른쪽 출력</p>
+          <p>오른쪽 출력</p>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-top" data-bs-backdrop="static" id="myoff-top">
+        <div class="offcanvas-header">
+          <h1>상단 출력</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>상단 출력</p>
+          <p>상단 출력</p>
+          <p>상단 출력</p>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-bottom" id="myoff-bottom">
+        <div class="offcanvas-header">
+          <h1>하단 출력</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>하단 출력</p>
+          <p>하단 출력</p>
+          <p>하단 출력</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p><p>화면 스크롤 표시</p>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

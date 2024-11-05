@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 사용하기 17</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>캐러셀</h2>
+
+    <div>
+      <h3>기본 캐러셀</h3>
+      <!-- 이미지를 좌우로 슬라이드하는 기능을 부트스트랩에서 미리 제공함 -->
+      <!-- 부모 태그로 div를 사용하고, id 속성에 값을 설정함 -->
+      <!-- 부모 태그인 div의 class에 .carousel, .slide 를 추가하고, 사용자 속성인 data-bs-ride="carousel" 을 추가 -->
+      <!-- 부모 태그인 div의 자식 태그로 3개의 영역이 존재함 -->
+      
+      <!-- 첫번째는 인디케이터 영역으로 div를 사용하고 class에 .carousel-indicators 를 추가함 -->
+      <!-- 인디케이터 div의 자식 태그로 button 태그를 추가하고, 
+           사용자 속성 data-bs-target 을 추가한 후 최상위 부모 태그인 div의 id 속성값을 지정함 -->
+      <!-- 인디케이터 div의 자식 태그인 button 태그에 추가로 사용자 속성 data-bs-slide-to 를 추가한 후 슬라이드 번호를 입력함 -->
+      <!-- 인디케이터 버튼의 갯수는 아래의 슬라이드 쇼 이미지 개수와 동일해야 함 -->
+      
+      <!-- 두번째는 슬라이드 쇼 영역으로 div를 사용하고 class에 .carousel-inner 를 추가함 -->
+      <!-- .carousel-inner 를 사용한 div의 자식 태그로 div 태그를 추가하고, class에 .carousel-item 을 추가함 -->
+      <!-- .carousel-item 을 사용한 div의 자식 태그로 img 태그를 추가함 -->
+      <!-- .carousel-item 을 사용한 div는 인디케이터의 버튼과 개수가 동일해야 함 -->
+
+      <!-- 세번째는 컨트롤 버튼 영역으로 button 태그를 사용하고 class에 .carousel-control-prev, .carousel-control-next를 사용하여
+           왼쪽, 오른쪽 슬라이드 버튼을 만듬 -->
+      <!-- 컨트롤 버튼에 사용자 속성 data-bs-target을 추가하고, 최상위 부모 태그인 div의 id 속성값을 지정함 -->
+      <!-- 컨트롤 버튼에 사용자 속성 .data-bs-slide="prev", .data-bs-slide="next" 를 각각 추가하여 왼쪽, 오른쪽 슬라이드 버튼의 기능을 추가함-->
+      <!-- 컨트롤 버튼의 자식 태그로 span 태그를 추가하고, class에 .carousel-control-prev-icon 을 추가하여 사용 -->
+
+      <!-- 슬라이드 쇼 이미지 위에 텍스트 입력 -->
+      <!-- .carousel-item을 사용한 div 의 자식 태그로 div를 추가하고, class에 .carousel-caption 을 추가함 -->
+      <!-- .carousel-caption을 사용한 div의 자식 태그로 텍스트 입력을 위한 h1 ~ h6 및 p태그를 추가하여 사용함 -->
+      <!-- 최상위 부모 태그인 div 태그의 class에 .carousel-dark 를 추가하여
+           슬라이드 쇼 이미지 위의 텍스트 색상을 변경할 수 있음 -->
+
+      <!-- .carousel-item을 사용한 div 태그에 사용자 속성 data-bs-interval="시간(1/1000초)"을 
+           입력하여 슬라이드 시간을 지정할 수 있음 -->
+      <!-- 최상위 부모 태그인 div 태그의 class에 .carousel-fade 를 추가하여 슬라이드 대신 페이드 효과를 적용함 -->
+      
+      <div id="mycarousel" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel">
+        <!-- 인디케이터 -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="0" class="active">
+          <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="2"></button>
+        </div>
+        <!-- 슬라이드 쇼 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images/haein07.jpg" alt="" class="d-block w-100">
+            <div class="carousel-caption text-dark">
+              <h3>캡션 사용하기</h3>
+              <p>원하는 텍스트를 입력하세요</p>
+              <p>캡션은 기본적으로 이미지의 중앙 하단에 출력됨</p>
+            </div>
+          
+          </div>
+          <div class="carousel-item">
+            <img src="../images/haein05.jpg" alt="" class="d-block w-100">
+            <div class="carousel-caption text-dark">
+              <h3>캡션 사용하기</h3>
+              <p>원하는 텍스트를 입력하세요</p>
+              <p>캡션은 기본적으로 이미지의 중앙 하단에 출력됨</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../images/haein09.jpg" alt="" class="d-block w-100">
+            <div class="carousel-caption text-dark">
+              <h3>캡션 사용하기</h3>
+              <p>원하는 텍스트를 입력하세요</p>
+              <p>캡션은 기본적으로 이미지의 중앙 하단에 출력됨</p>
+            </div>
+          </div>
+        </div>
+        <!-- 컨트롤 버튼 -->
+        <button type="button" class="carousel-control-prev" data-bs-target="#mycarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button type="button" class="carousel-control-next" data-bs-target="#mycarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      
+
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

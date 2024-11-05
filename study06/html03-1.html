@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 5px auto;
+        }
+
+        .red { background-color: crimson;}
+        .green { background-color: greenyellow;}
+        .blue { background-color: rgb(6, 126, 219);}
+
+        /* active는 마우스를 클릭하면, hover는 마우스를 대기만해도 */
+        #div01 .translate-x-right:active { transform: translateX(100px);}
+        #div01 .translate-y-bottom:hover { transform: translateY(100px);}
+        #div01 .translate-xy-right-bottom:hover { transform: translate(100px, 100px);}
+
+        #div02 .scale-x:active { transform: scaleX(2);}
+        #div02 .scale-y:active { transform: scaleY(1.5);}
+        #div02 .scale-xy:active { transform: scale(3, 3);}
+
+        #div03 .rotate-left:hover { transform: rotate(90deg);} /* 시계방향으로 90도 돌았다 */
+        #div03 .rotate-right:hover { transform: rotate(270deg);} /* 반시계방향으로 270도 돌았다 */
+        #div03 .rotate-left2:hover { transform: rotate(-90deg);} /* 시계방향으로 -90도 돌았다, 또는 반시계방향으로 90도 돌았다 */
+
+        #div04 .skew-x:active { transform: skewX(30deg);}
+        #div04 .skew-y:active { transform: skewY(30deg);}
+        #div04 .skew-xy:active { transform: skew(30deg, 30deg);}
+
+        .big-box {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        .small-box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        #div05 .transition-x:active {
+            transition-property: width;
+            transition-duration: 5s;
+            transition-timing-function: ease-out;
+            transition-delay: 1s;
+            width: 400px;
+        }
+
+        #div05 .transition-xy:active {
+            
+            width: 300px;
+            height: 300px;
+            transition: 5s ease;
+        }
+
+        @keyframes shape {
+            from {
+                border: 1px solid transparent;
+            }
+            to {
+                border: 10px dotted black;
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes colors {
+            0% {
+                background-color: red;
+            }
+            30% {
+                background-color: yellow;
+            }
+            70% {
+                background-color: blue;
+            }
+            100% {
+                background-color: orange;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                left: 400px;
+                top: 0px;
+            }
+            50% {
+                left: 400px;
+                top: 400px;
+            }
+            75% {
+                left: 0px;
+                top: 400px;
+            }
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        @keyframes toright {
+            from{ left: 0px; background-color: yellowgreen;}
+            to {left: 500px; background-color: yellow;}
+        }
+
+        #box1:hover {
+            animation-name: shape;
+            animation-duration: 3s;
+            animation-delay: 500ms; /* 0.5초 뒤 동작 */
+        }
+
+        #box2:hover {
+            animation-name: colors;
+            animation-duration: 5s;
+            animation-delay: 500ms;
+            animation-direction: reverse; /*direction은 iteration-count와 함께 사용해야 함*/
+            animation-iteration-count: 2;
+        }
+
+        #box3:hover > div {
+            animation-name: move, colors;
+            animation-duration: 5s;
+            animation-delay: 500ms;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+        }
+
+        #box4 {
+            animation-name: toright;
+            animation-duration: 3s;
+            animation-delay: 1s;           
+            /* animation-fill-mode : 애니메이션이 재생되지 않는 상태일 때 지정한 태그의 스타일을 지정 */
+            /* none(기본값) : 애니메이션 실행 전 및 실행 후에 스타일을 적용하지 않음 */
+            /* forwards : 애니메이션 마지막 프레임의 스타일을 유지 */ 
+            /* backwards : 애니메이션 첫번째 프레임의 스타일을 유지 */
+            /* both : 상태에 따라서 앞뒤의 스타일을 유지 */ 
+            animation-fill-mode: forwards;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h2>transform</h2>
+
+        <div id="div01">
+            <h3>translate(), translateX(), translateY()</h3>
+
+            <div class="box red translate-x-right"></div>
+            <div class="box green translate-y-bottom"></div>
+            <div class="box blue translate-xy-right-bottom"></div>
+
+        </div>
+
+        <div id="div02">
+            <h3>scale, scaleX, scaleY</h3>
+
+            <div class="box red scale-x"></div>
+            <div class="box green scale-y"></div>
+            <div class="box blue scale-xy"></div>
+        </div>
+
+        <div id="div03">
+            <h3>rotate</h3>
+
+            <div class="box rotate-left">
+                <img src="../images/cat01.jpg" alt="" style="width: 100%;">
+            </div>
+            <div class="box rotate-right">
+                <img src="../images/cat01.jpg" alt="" style="width: 100%;">
+            </div>
+            <div class="box rotate-left2">
+                <img src="../images/cat01.jpg" alt="" style="width: 100%;">
+            </div>
+
+        </div>
+
+        <br><hr><br>
+
+        <div id="div04">
+            <h3>skew, skewX, skewY</h3>
+
+            <div class="box red skew-x"></div>
+            <div class="box green skew-y"></div>
+            <div class="box blue skew-xy"></div>
+
+        </div>
+
+        <div id="div05">
+            <h3>transition</h3>
+
+            <div class="box big-box">
+                <div class="box small-box blue transition-x"></div>
+                <div class="box small-box green transition-xy"></div>
+            </div>
+        </div> 
+
+
+        <br><hr><br>
+
+        <div id="div06">
+            <h3>animation</h3>
+
+            <div class="box red" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box big-box" id="box3">
+                <div class="box small-box blue"></div>
+            </div>
+            <div class="box" id="box4" style="position: relative;"></div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

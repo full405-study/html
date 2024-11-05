@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        /* CSS 선택자 : CSS를 통해서 디자인을 적용 시 해당 웹 페이지에서 정확한 html 태그를 선택하기 위한 기호 */
+        /* 전체 선택자 : 사용 기호 '*', 웹 페이지의 모든 html 태그를 선택하는 선택자 */ 
+        /* 태그 선택자 : 사용 기호 'html태그명', 현재 웹 페이지 안에 있는 html 태그 중 지정한 html 명을 가지고 있는 모든 html 태그를 선택함 */ 
+        /* id 선택자 : 사용 기호 : '#', 현재 웹 페이지 안에서 id 속성값을 기준으로 html 태그를 선택함, id는 현재 웹 페이지에서 유일한 값을 가지고 있음*/
+        /* class 선택자 : 사용 기호 '.', 현재 웹 페이지 안에서 class 속성값을 기준으로 지정한 class 속성값과 동일한 html 태그를 모두 선택함, 
+        하나의 html 태그가 여러개의 class 속성값을 가질 수 있음, 여러개 및 여러 종류의 html 태그는 하나의 class 속성값을 공유할 수 있음*/
+        /* 그룹 선택자 : 사용 기호 ',', css 속성 및 속성값이 동일한 경우 css선택자를 여러개 선언할 수 있음*/
+        /* 자식 선택자 : 사용기호 '>', 지정한  html 태그의 직계 자식 태그를 선택함*/
+        /* 사용법 - '부모선택자' > '지정할 선택자' */
+        /* 자손 선택자 : 사용기호 ' ', 지정한  html 태그의 자손 중에서 태그를 선택함*/
+        /* 사용법 - '부모선택자' '지정할 선택자' */
+        * {
+            margin: 0;
+        }
+
+        h3, p {text-align: center;}
+        p {
+            font-style: italic;
+            color: orangered;
+            /* text-align: center; */
+        }
+
+        h3 {
+            color: greenyellow;
+            /* text-align: center; */
+            font-weight: bold;
+        }
+
+        #container {
+            width: 500px;
+            margin: 10px auto;
+            padding: 10px;
+            border: 10px solid #000000;
+        }
+
+        .accent{
+            border: 1px dashed black;
+            padding: 5px;
+        }
+
+        .bg{
+            background-color: #ddd;
+        }
+
+        /* 자손 선택자를 사용하여 스타일을 적용 */
+        #container2 p {
+            color: #00ff95;
+            font-weight: bold;
+        }
+
+        /* 자식 선택자를 사용하여 스타일을 적용*/
+        #container2 > p {
+            color: blue;
+            font-size: 24px;
+        }
+
+        /* 태그 선택자를 사용하여 html 태그 명이 p인 태그 중 class 명이 bg인 태그를 선택*/
+        p.bg{
+            border: 1px dashed gray;    
+        }
+
+        /*자손 선택자를 사용하여 container2 태그의 자손 태그 중 class 명이 bg인 태그를 선택*/
+        #container2 .bg {
+            background-color: peachpuff;
+        }
+
+        /*자식 선택자를 사용하여 container2 태그의 자식 태그 중 class 명이 bg인 태그를 선택*/
+        #container2 > .bg {
+            background-color: blanchedalmond;
+        }
+
+
+    </style>
+</head>
+<body>
+    <img src="sadcat.jpg" alt="슬퍼하는 고양이">
+
+    <div id="container">
+    <h3 class="accent bg">태그 선택자</h3>
+    <p>껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+    <p>레드향은 한라봉과 귤을 교배한 것으로</p>
+    <p style="color: darkseagreen;">비타민 C와 비타민 P가 풍부해...</p>
+    </div>
+
+    <br><br>
+
+    <div id="container2">
+    <h3>태그 선택자</h3>
+    <p>껍질에 붉은 빛이 돌아 레드향이라 불린다.</p>
+    <p class="bg">레드향은 한라봉과 귤을 교배한 것으로</p>
+    <p>비타민 C와 비타민 P가 풍부해...</p>
+    
+    <div>
+        <h4>조리법</h4>
+        <p>어떻게 먹어도 맛있어요</p>
+        <p class="bg">사실 없어서 못 먹음</p>
+        <ul>
+            <li>한라봉보다 레드향이지</li>
+        </ul>
+    </div>
+
+    <br><br>
+</body>
+</html>

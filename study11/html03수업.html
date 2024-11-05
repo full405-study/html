@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 14</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>collapsible</h2>
+
+    <div>
+      <h3>기본 collapse 사용하기</h3>
+      <!-- css의 display: none 속성을 사용하여 화면의 특정 영역을 숨기거나 보이게 하는 기능을 부트스트랩에서 미리 구현하여 애니메이션과 함께 제공함 -->
+      <!-- button 태그에 사용자 속성인 data-bs-toggle="collapse" 를 추가하고, 보이거나 숨길 영역의 위치를 지정하기 위한 사용자 속성 data-bs-target을 추가함 -->
+      <!-- 보이거나 숨길 영역을 div 태그를 사용하고, id 속성을 추가함(id 속성값은 data-bs-target 속성이 사용함) -->
+      <!-- div 태그의 class에 .collapse 를 추가하여 사용함 -->
+      <!-- button 대신 a 태그를 사용할 경우 data-bs-target을 href 속성이 대신함 -->
+      <!-- 처음부터 영역을 보이게 하고 싶을 경우 .collapse class를 사용한 영역에 .show 를 추가함 -->
+
+      <div id="hide-div" class="collapse">
+        <h1>위의 버튼 및 a 태그를 클릭 시 숨겨졌다가 보였다가 하는 영역</h1>
+        <p>부트스트랩의 collapse 기능을 사용하여 만들어짐</p>
+        <p>display: none 속성이 내부적으로 사용됨</p>
+        <p>부트스트랩에서 애니메이션도 적용해 놓음</p>
+        <p>요즘 쇼핑몰의 상품 설명 부분에서 많이 사용하고 있음</p>
+      </div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#hide-div">버튼사용 시</button>
+      <div id="hide-div2" class="collapse show">
+        <h1>위의 버튼 및 a 태그를 클릭 시 숨겨졌다가 보였다가 하는 영역</h1>
+        <p>부트스트랩의 collapse 기능을 사용하여 만들어짐</p>
+        <p>display: none 속성이 내부적으로 사용됨</p>
+        <p>부트스트랩에서 애니메이션도 적용해 놓음</p>
+        <p>요즘 쇼핑몰의 상품 설명 부분에서 많이 사용하고 있음</p>
+      </div>
+      <a href="#hide-div2" class="btn btn-primary" data-bs-toggle="collapse">a 태그 사용 시</a>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>accoordion</h3>
+      <!-- 부트스트랩에서 collapse 기능을 사용하여 미리 디자인해 놓은 UI 중 하나 -->
+      <!-- list group 처럼 생긴 부분을 선택 시 숨겨진 내용이 출력되고, 다른 곳은 선택 시 기존 내용을 숨기고 선택한 부분의 숨겨진 내용을 출력하는 UI -->
+      <!-- 부모 태그로 div 를 사용하고 id에 .accordion 을 추가함 -->
+      <!-- 버튼으로 동작할 a 태그를 추가하고 사용자 속성 data-bs-toggle="collapse" 를 추가함 -->
+      <!-- a 태그의 href속성에 숨겼다가 보여줄 영역의 id 값을 입력 -->
+      <!-- 숨겼다가 보여줄 영역을 div 태그로 사용하고, id 속성을 설정함 -->
+      <!-- div 태그의 class에 .collapse 와 .show(처음부터 보여줄 경우) 를 사용하고, 사용자 속성 data-bs-parent="#accordion" 을 추가함 -->
+      <!-- a 태그와 div 태그를 여러개 사용함 -->
+
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <a href="#acc1" class="btn" data-bs-toggle="collapse">첫번째 영역 버튼</a>
+          </div>
+          <div id="acc1" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body">
+              <h1>첫번째 영역</h1>
+              <p>버튼 클릭 시 열렸다가 닫히는 영역</p>
+              <p>다른 곳 클릭 시 닫힘</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a href="#acc2" class="btn" data-bs-toggle="collapse">두번째 영역 버튼</a>
+          </div>
+          <div id="acc2" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              <h1>두번째 영역</h1>
+              <p>버튼 클릭 시 열렸다가 닫히는 영역</p>
+              <p>다른 곳 클릭 시 닫힘</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a href="#acc3" class="btn" data-bs-toggle="collapse">세번째 영역 버튼</a>
+          </div>
+          <div id="acc3" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              <h1>세번째 영역</h1>
+              <p>버튼 클릭 시 열렸다가 닫히는 영역</p>
+              <p>다른 곳 클릭 시 닫힘</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

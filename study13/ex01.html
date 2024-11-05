@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex01</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+  <style>
+    body {
+      letter-spacing: 0.2em;      
+      position: relative;
+    }
+
+    p {
+      letter-spacing: normal;
+    }
+
+    .box:hover {
+      background-color: lightgray;
+    }
+    
+  </style>
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-sm text-bg-light fixed-top shadow">
+      <div class="container-fluid">
+        <a href="#header" class="navbar-brand fs-6 ms-4 box">Gourmet au Catering</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#topmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end me-3" id="topmenu">
+          <ul class="navbar-nav fs-6">
+            <li class="nav-item"><a href="#about" class="nav-link box">About</a></li>
+            <li class="nav-item"><a href="#menu" class="nav-link box">Menu</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link box">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <header class="mt-4" id="header">
+    <div class="position-relative mx-auto"  style="max-width: 1600px; min-width: 800px;">
+      <img src="../study13/images/ex01-1.jpg" alt="" class="w-100">
+      <h1 class="position-absolute bottom-0 start-0 mx-4 my-4 text-muted">Le Catering</h1>
+    </div>
+    </div>
+  </header>
+  <main class="mt-4">
+    <div class="container" id="about">
+      <div class="row my-5 p-3">
+        <div class="col my-5 p-3">
+          <img src="../study13/images/ex01-2.jpg" alt="" class="w-100">
+        </div>
+        <div class="col mx-3 p-3">
+            <h2 class="text-center">About Catering</h2>
+            <br>
+            <h5 class="text-center text-secondary">Tradition since 1889</h5>
+            <p>The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor 
+              incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+              ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit 
+              esse cillum dolore eu fugiat nulla pariatur.We only use <span class="bg-secondary-subtle">seasonal</span> ingredients.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-5 border-top container d-flex" id="menu">
+      <div class="col-6">
+        <h2 class="my-5 text-center">Our Menu</h2>
+        <h4 class="mt-5">Bread Basket</h4>
+        <p class="mt-3">Assortment of fresh baked fruit breads and muffins 5.50</p>
+        <h4 class="mt-5">Honey Almond Granola with Fruits</h4>
+        <p class="mt-3">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+        <h4 class="mt-5">Belgian Waffle</h4>
+        <p class="mt-3">Vanilla flavored batter with malted flour 7.50</p>
+        <h4 class="mt-5">Scrambled eggs</h4>
+        <p class="mt-3">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+        <h4 class="mt-5">Blueberry Pancakes</h4>
+        <p class="mt-3">With syrup, butter and lots of berries 8.50</p>
+      </div>
+      <div class="m-5 col">
+        <img src="../study13/images/ex01-3.jpg" alt="">
+      </div>
+    </div>
+    <div class="my-5 border-top container" id="contact">
+      <h2 class="my-5">Contact</h2>
+      <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+      <br>
+      <p class="text-primary fw-bold fs-5">Catering Service, 42nd Living St, 43043 New York, NY</p>
+      <br>
+      <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
+      <form>
+        <div class="my-3">
+         <input type="text" class="form-control-plaintext border-bottom" id="exname" placeholder="Name">
+        </div>
+        <div class="my-3 border-bottom">
+         <input type="text" class="form-control-plaintext border-bottom" id="expeople" placeholder="How many people">
+        </div>
+        <div class="my-3 border-bottom">
+         <input type="datetime-local" class="form-control-plaintext border-bottom" value="2020-11-16T20:00" id="exdate">
+        </div>
+        <div class="my-3 border-bottom">
+          <input type="text" class="form-control-plaintext border-bottom" id="exrequire" placeholder="Message ∖ Special requirements">
+         </div>
+      </form>
+      <button type="submit" class="btn bg-secondary-subtle rounded-0">SEND MESSAGE</button>
+    </div>
+  </main>
+  <footer class= "mt-5 p-5 bg-secondary-subtle text-center text-dark">
+    <p class="lead fs-6">Powered by 
+      <a href="#" class="link-dark"> w3.css</a></p>
+  </footer>
+</body>
+</html>

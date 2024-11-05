@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display 속성 사용하기</title>
+  <!-- 인라인 레벨 태그는 컨텐츠의 크기가 해당 태그의 크기로 결정됨-->
+
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      border: 2px solid black;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h2>display 속성 사용하기</h2>
+    <!--display 속성은 지정한 태그를 블록 레벨이나 인라인 레벨로 설정하는 속성-->
+
+
+    <!-- div 태그는 블록 레벨 태그-->
+    <div class="box">div 태그</div>
+    <div class="box" style="display: inline;">div 태그</div>
+    <!--블록 레벨 태그인 div에 display : inline을 사용하여 인라인 레벨 태그로 설정함-->
+
+    <br>
+
+    <!-- span 태그는 인라인 레벨 태그-->
+    <!-- 인라인 레벨 태그는 컨텐츠의 width가 해당 태그의 width로 결정됨-->
+    <span class="box">span 태그</span>
+    
+    <span class="box" style="margin: 50px; padding: 50px;">span 태그</span>
+    <span class="box">span 태그</span>
+    <!-- 인라인 레벨 태그는 margin의 경우 margin-left, margin-right를 설정 가능함, margin-top, margin-bottom은 설정 안됨-->
+    <!-- 인라인 레벨 태그에서 padding값은 모두 사용 가능-->
+    <span class="box" style="display: block;">span 태그</span>
+    <!--인라인 레벨 태그인 span에 display : block을 사용하여 블록 레벨 태그로 설정함-->
+
+    <br><br>
+    <!-- inline-block 는 block의 모든 margin 속성 값과, inline의 한 라인에 여러 개의 태그를 입력할 수 있는 것이 모두 가능한 형태-->
+    <span class="box">span 태그</span>
+    <br>
+    <span class="box">span 태그</span>
+    <span class="box" style="display: inline-block; margin: 50px;">span 태그</span>
+    <span class="box">span 태그</span>
+    <br>
+    <span class="box">span 태그</span>
+
+    <br><br>
+    <!--display : none 은 화면에 지정한 html 태그를 출력하지 않음-->
+    <!--해당 태그가 가지고 있던 공간까지 화면에서 삭제함-->
+    <div class="box">div 태그, display 속성 기본 값</div>
+    <div class="box" style="display: none;">div 태그, display 속성 none</div>
+    <!--opacity : 0.0 은 html 태그를 화면에 출력하고 해당 태그의 투명도를 완전 투명으로 만들어서 화면에는 보이지 않지만 해당 태그의 공간은 그대로 남겨둠-->
+    <div class="box" style="opacity: 0.0;">div 태그, opacity 속성 0.0</div>
+    <!--visibility : hidden 은 html 태그를 화면에 출력하고 해당 태그를 화면에서 보이지 않게 숨김, 해당 태그의 공간은 그대로 남겨둠-->
+    <div class="box" style="visibility: hidden;">div 태그, visibility 속성 hidden</div>
+
+  </div>
+</body>
+</html>

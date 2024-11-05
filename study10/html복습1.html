@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>복습1</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h2>navbar 사용하기</h2>
+
+    <div>
+      <h3>기본 navbar</h3>
+      <!--부트스트랩에서 화면 상단의 네비게이션바를 쉽게 사용할 수 있도록 미리 디자인하여 제공-->
+      <!--nav 태그에 주로 사용, div 태그에 사용해도 상관없음-->
+      <!--네비게이션바로 만들 nav 태그의 class에 .navbar .navbar-expand-{반응형크기} 를 추가하여 사용-->
+      <!--자식 태그로 ul 태그를 사용하고, class에 .navbar-nav 를 추가함-->
+      <!--ul의 자식 태그로 li 태그를 사용하고, class 에 .nav-item 을 추가하여 네비게이션 바의 메뉴를 표시-->
+      <!--li의 자식 태그로 a 태그를 사용하고, class에 .nav-link 를 추가하여 메뉴 클릭 시 화면 이동 기능을 제공-->
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>세로 형태 navbar</h3>
+
+      <nav class="navbar bg-dark navbar-dark p-2">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+        </ul>
+      </nav>
+
+      <br><br>
+
+      <h3>세로 형태의 navbar 실제 사용 시 모습</h3>
+      <div class="border border-info border-2 m-3 p-2">
+        <header>
+          <h1 class="text-center m-4">헤더 영역</h1>
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link">메인 메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메인 메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메인 메뉴 3</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main class="container">
+          <div class="row">
+            <aside class="col-2">
+              <nav class="navbar bg-dark navbar-dark">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a href="#" class="nav-link">사이드 1</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">사이드 2</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">사이드 3</a></li>
+                </ul>
+              </nav>
+            </aside>
+            <div class="col-10">
+              <h1 class="text-center m-5 p-5">메인 컨텐츠 영역</h1>
+            </div>
+          </div>
+        </main>
+        <footer class="border-top">
+          <h1 class="text-center m-4">푸터 영역</h1>
+        </footer>
+      </div>
+    </div>
+
+      <br><hr><br>
+
+      <div>
+        <h3>메뉴 정렬, 테마 컬러, 메뉴 활성화/비활성화</h3>
+        <!-- .justify-content-{정렬방식} 을 class에 추가하여 메뉴를 정렬할 수 있음 -->
+        <!-- bg-{테마컬러} 를 사용하여 class에 추가하여 네비게이션 바의 색상을 변경할 수 있음 -->
+        <!-- .navbar-dark, .navbar-light 의 2가지 형태의 네비게이션 바 메뉴의 글자 색을 지정할 수 있음 -->
+        <!-- a 태그의 class 에 active 혹은 disabled 를 추가하여 네비게이션 바 메뉴의 활성화/비활성화 할 수 있음 -->
+
+        <h4>justify-content-start (기본값)</h4>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-2">
+          <div class="container-fluid justify-content-start">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <br>
+
+        <h4>justify-content-center</h4>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-2">
+          <div class="container-fluid justify-content-center">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <br>
+
+        <h4>justify-content-end</h4>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-2">
+          <div class="container-fluid justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <br>
+
+        <h4>테마컬러</h4>
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark p-2">
+          <div class="container-fluid justify-content-start">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm text-bg-secondary p-2">
+          <div class="container-fluid justify-content-start">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm text-bg-success p-2">
+          <div class="container-fluid justify-content-start">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm text-bg-info p-2">
+          <div class="container-fluid justify-content-start">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm text-bg-warning p-2">
+          <div class="container-fluid justify-content-start">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm text-bg-danger p-2">
+          <div class="container-fluid justify-content-start">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm text-bg-light p-2">
+          <div class="container-fluid justify-content-start">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-2">
+          <div class="container-fluid justify-content-start">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+
+      </div> 
+
+      <br><hr><br>
+
+      <div>
+        <h3>네비게이션 바에 브랜드 로고 넣기, 네비게이션 바에 텍스트 넣기</h3>
+        <!-- 네비게이션 바의 자식 태그로 a 태그를 추가하고, class에 .navbar-brand 를 사용하여 네비게이션 바에 브랜드 로고용 텍스트를 입력할 수 있음 -->
+        <!-- a 태그의 자식 태그로 img 태그를 사용하여 로고 텍스트 대신 로고 이미지를 출력할 수 있음 -->
+        <!-- 네비게이션 바의 자식 태그로 span 태그를 추가하고, class에 .navbar-text 를 사용하여 네비게이션 바에 메뉴 버튼이 아닌 일반 텍스트를 추가할 수 있음 -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-2">
+          <div class="container-fluid">
+            <a href="#" class="navbar-brand">Logo</a>
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-2">
+          <div class="container-fluid">
+            <a href="#" class="navbar-brand"><img src="../study05/pet/elmobomb.jpg" alt="logo" style="width: 40px;" class="rounded-pill"></a>
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-2">
+          <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+              <img src="../study05/pet/elmobomb.jpg" alt="logo" style="width: 40px;" class="rounded-pill">
+            </a>
+            <span class="navbar-text">네비게이션 바 안에 일반 텍스트 메뉴</span>
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        
+      </div>
+
+      <br><hr><br>
+
+      <div>
+        <h3>네비게이션 바 메뉴 접기 / 펴기</h3>
+        <!-- 반응형 크기에 따라 네비게이션바의 메뉴를 화면에 보였다가 숨겼다가 하는 방식-->
+        <!-- 기본 네비게이션바의 자식 태그로 button 태그 추가, 화면 크기에 따라 메뉴를 숨기고 보여줄 영역인 div 태그를 추가해야함 -->
+        <!-- .navbar-brand class를 사용한 a 태그의 형제 태그로 button 태그를 추가 -->
+        <!-- button 태그의 class에 .navbar-toggler 를 추가, 사용자 속성인 data-bs-toggle="collapse" 를 추가함 -->
+        <!-- button 태그에 사용자 속성인 data-bs-target 속성을 추가하고 보였다가 숨겼다가 할 영역의 id값을 지정함 -->
+        <!-- button 태그의 아이콘으로 span 태그를 사용하고, class에 .navbar-toggler-icon 을 추가함 -->
+        <!-- 네비게이션 바의 메뉴인 ul 태그에 div 태그를 부모 태그로 추가함 -->
+        <!-- div 태그의 class에 .collapse, .navbar-collapse를 추가하고, id 속성을 사용함 -->
+        <!-- div 태그의 id 속성값은 button 태그의 data-bs-target 속성에서 사용함 -->
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <div class="container-fluid">
+            <a href="#" class="navbar-brand">Logo</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu1">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu1">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <br><br>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+              <img src="../study05/pet/sadhamster.jpg" alt="logoham" class="rounded-pill" style="width: 40px;">
+              Logo
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu2">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu2">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <br><hr><br>
+
+      <div>
+        <h3>드롭다운 메뉴가 있는 네비게이션 바</h3>
+        <!-- 네비게이션 바의 메뉴인 li 태그에 dropdown 를 추가하여 네비게이션 바 메뉴에 드롭다운 메뉴를 사용함 -->
+        <!-- li 태그의 class에 .dropdown 를 추가 -->
+        <!-- li 태그의 자식 태그인 a 태그의 class에 .dropdown-toggle을 추가하고, 사용자 속성인 data-bs-toggle="dropdown" 을 추가하여 사용함 -->
+        <!-- a 태그의 형제 태그로 ul 태그를 추가하고 class에 .dropdown-menu를 추가하여 드롭다운 버튼을 생성 -->
+        <!-- 드롭 다운 메뉴인 ul 태그의 자식 태그인 li 태그와 a 태그를 추가하고, a 태그의 class에 .dropdown-item 을 추가하여 사용함 -->
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <div class="container-fluid">
+
+            <a href="#" class="navbar-brand">Logo</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu3">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu3">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a href="#" class="nav-link">메뉴1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">메뉴2</a></li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">메뉴3</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">섭메1</a></li>
+                    <li><a href="#" class="dropdown-item">섭메2</a></li>
+                    <li><a href="#" class="dropdown-item">섭메3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <div class="container-fluid">
+              <a href="#" class="navbar-brand">logo
+                  <img src="../study05/pet/rocket.jpg" alt="logoroc" class="rounded-pill" style="width: 40px;">
+              </a>
+              <button type="button" class="navbar-toggler" data-bs-toggle="dropdown" data-bs-target="#menu4">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="menu4">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item"><a href="#" class="nav-link">메뉴1</a></li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">메뉴2</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" class="dropdown-item">섭메a</a></li>
+                      <li><a href="#" class="dropdown-item">섭메b</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </nav>
+      </div>
+  </main>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

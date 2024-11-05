@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 테마 컬러</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h3 class="mb-3 text-center">부트스트랩 테마 컬러</h3>
+        <!--부트스트랩에서는 자주 사용하고 각각의 의미를 가지고 있는 테마 컬러를 정의하여 쉽게 사용하도록 함-->
+        <!--기본적으로 8가지의 테마 컬러가 있음-->
+        <!--primary, success, info, warning, danger, secondary, dark, light-->
+        <!--사용 방법은 각 'CSS 속성명-테마명' 형태로 사용할 수 있도록 구성되어 있음-->
+        <!--텍스트(text-{테마명})와 배경(bg-{테마명})에 주로 사용함-->
+
+        <div>
+            <h4>text에 사용하는 테마 컬러</h4>
+            <!--text에 사용하는 테마 컬러는 text-{테마명} 형태로 사용-->
+            <!--text는 기본 테마 컬러와 추가 색상이 존재함-->
+            <!--text-primary(파랑색), text-success(녹색계열), text-info(하늘색), 
+                text-warning(노랑색), text-danger(빨강색계열), text-secondary(회색), 
+                text-dark(어두운회색), text-light(밝은회색 != 흰색), text-muted(=text-secondary), 
+                text-body(기본 본문 색상, 검정색), text-white(흰색)-->
+            <!--추가 테마 컬러로 text-black-50. text-white-50(불투명도 50%)-->
+            <h4 class="text-muted">테마 컬러 text-muted</h4>    
+            <h4 class="text-primary">테마 컬러 text-primary</h4>    
+            <h4 class="text-success">테마 컬러 text-success</h4>    
+            <h4 class="text-info">테마 컬러 text-info</h4>    
+            <h4 class="text-warning">테마 컬러 text-warning</h4>    
+            <h4 class="text-danger">테마 컬러 text-danger</h4>    
+            <h4 class="text-secondary">테마 컬러 text-secondary</h4>    
+            <h4 class="text-dark">테마 컬러 text-dark</h4>    
+            <h4 class="bg-dark text-light">테마 컬러 text-light</h4>    
+            <h4 class="text-body">테마 컬러 text-body</h4>    
+            <h4 class="text-white bg-dark">테마 컬러 text-white</h4>    
+            <h4 class="text-black-50">테마 컬러 text-black-50</h4>    
+            <h4 class="text-white-50 bg-dark">테마 컬러 text-white-50</h4>    
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>배경 테마 컬러</h3>
+            <!--background-color에 사용하는 테마 컬러는 bg-{테마명} 형태로 사용-->
+            <!--background-color는 기본 테마 컬러와 subtle라는 기본 테마 컬러보다 밝은 색상이 존재함-->
+            <!--bg-primary(파랑색), bg-success(녹색계열), bg-info(하늘색), 
+                bg-warning(노랑색), bg-danger(빨강색계열), bg-secondary(회색), 
+                bg-dark(어두운회색), bg-light(밝은회색 != 흰색)-->
+            <!--bg-primary-subtle(파랑색), bg-success-subtle(녹색계열), bg-info-subtle(하늘색), 
+                bg-warning-subtle(노랑색), bg-danger-subtle(빨강색계열), bg-secondary-subtle(회색), 
+                bg-dark-subtle(어두운회색), bg-light-subtle(밝은회색 != 흰색)-->
+
+            <div class="bg-primary">배경 테마 컬러 bg-primary</div>
+            <div class="bg-primary-subtle">배경 테마 컬러 bg-primary-subtle</div>
+            <div class="bg-success">배경 테마 컬러 bg-success</div>
+            <div class="bg-success-subtle">배경 테마 컬러 bg-success-subtle</div>
+            <div class="bg-info">배경 테마 컬러 bg-info</div>
+            <div class="bg-info-subtle">배경 테마 컬러 bg-info-subtle</div>
+            <div class="bg-warning">배경 테마 컬러 bg-warning</div>
+            <div class="bg-warning-subtle">배경 테마 컬러 bg-warning-subtle</div>
+            <div class="bg-danger">배경 테마 컬러 bg-danger</div>
+            <div class="bg-danger-subtle">배경 테마 컬러 bg-danger-subtle</div>
+            <div class="bg-secondary">배경 테마 컬러 bg-secondary</div>
+            <div class="bg-secondary-subtle">배경 테마 컬러 bg-secondary-subtle</div>
+            <div class="bg-dark">배경 테마 컬러 bg-dark</div>
+            <div class="bg-dark-subtle">배경 테마 컬러 bg-dark-subtle</div>
+            <div class="bg-light">배경 테마 컬러 bg-light</div>
+            <div class="bg-light-subtle">배경 테마 컬러 bg-light-subtle</div>
+
+            <hr>
+
+            <h3>배경 테마 컬러 사용 시 텍스트 색상 자동 설정</h3>
+            <!--부트스트랩의 배경 테마 컬러 사용 시 배경 테마 색상과 텍스트 테마 색상이 같을 경우 화면에 제대로 표시되지 않음-->
+            <!--부트스트랩에서는 text-bg-{테마색상} 을 사용 시 배경 테마 색상에 맞는 텍스트 색상을 자동으로 설정하도록 함-->
+
+            <h4 class="bg-primary text-primary">텍스트 및 배경 색상이 같을 경우</h4>
+            <h4 class="bg-primary text-white">텍스트와 배경 색상을 따로 설정</h4>
+            <h4 class="text-bg-primary">자동 설정 시, text-bg-primary</h4>
+            <h4 class="text-bg-success">자동 설정 시, text-bg-success</h4>
+            <h4 class="text-bg-info">자동 설정 시, text-bg-info</h4>
+            <h4 class="text-bg-warning">자동 설정 시, text-bg-warning</h4>
+            <h4 class="text-bg-danger">자동 설정 시, text-bg-danger</h4>
+            <h4 class="text-bg-secondary">자동 설정 시, text-bg-secondary</h4>
+            <h4 class="text-bg-dark">자동 설정 시, text-bg-dark</h4>
+            <h4 class="text-bg-light">자동 설정 시, text-bg-light</h4>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

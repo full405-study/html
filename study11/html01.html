@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 12</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>form checkbox, radio</h2>
+
+        <div>
+            <h3>checkbox</h3>
+            <!-- 부트스트랩은 checkbox를 미리 디자인하여 제공함(기본적으로 세로 형태로 구성됨) -->
+            <!-- 부모 태그로 div를 사용하고, class에 .form-check를 추가하여 사용함 -->
+            <!-- div의 자식 태그로 input 태그와 label 태그를 사용함 -->
+            <!-- input 태그의 class에 .form-check-input 를 추가하여 사용함 -->
+            <!-- label 태그는 input 태그 다음에 사용하고 class에 .form-check-label -->
+            <form>
+                <div class="my-3" form check>
+<input type="checkbox" class="form-check-input" id="chk1" name="chk1" value="사과">
+<label for="chk1" class="form-check-label">사과</label>
+                </div>
+                <div class="my-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="chk2" name="chk2" value="배">
+                    <label for="chk2" class="form-check-label">배</label>
+                </div>
+                <div class="my-3">
+                    <button type="submit" class="btn btn-primary">전송</button>
+                </div>
+            </form>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>radio</h3>
+            <!-- 기본적으로 checkbox와 사용방법이 동일함 -->
+            <!-- input 태그의 type만 radio로 변경 -->
+            <!-- 각 input 태그의 name 속성값을 동일하게 설정 -->
+            <form>
+                <div class="my-3 form-check">
+                    <input type="radio" class="form-check-input" id="radio1" name="ra" value="사과">
+                    <label for="radio1" class="form-check-label">사과</label>
+                </div>
+                <div class="my-3 form-check">
+                    <input type="radio" class="form-check-input" id="radio2" name="ra" value="수박">
+                    <label for="radio2" class="form-check-label">수박</label>
+                </div>
+                <div class="my-3 form-check">
+                    <input type="radio" class="form-check-input" id="radio3" name="ra2" value="복숭아">
+                    <label for="radio3" class="form-check-label">복숭아</label>
+                </div>
+                <div class="my-3">
+                     <button type="submit" class="btn btn-primary">전송</button>
+                </div>
+            </form>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>toggle switch</h3>
+            <!-- 부트스트랩에서 제공하는 checkbox의 다른 디자인 -->
+            <!-- 주로 2가지 설정 값 중 하나를 선택해야 하는 경우 사용함 -->
+            <!-- 기본적으로 checkbox와 동일하며, 부모 태그인 div의 class에 .form-switch를 추가하여 사용함 -->
+            <form>
+                <div class="my-3 form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="switch1" name="switch1" value="OFF">
+                    <label for="switch1" class="form-check-label">거실 조명</label>
+                </div>
+                <div class="my-3 form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="switch2" name="switch2" value="OFF">
+                    <label for="switch2" class="form-check-label">안방 조명</label>
+                </div>
+                <div class="my-3">
+                    <button type="submit" class="btn btn-primary">확인</button>
+                </div>
+            </form>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>inline checkbox, radio</h3>
+            <!-- 부트스트랩에서 제공하는 checkbox, radio, toggleswitch 는 모두 세로 형태(display: block)로 구성되어 있음 -->
+            <!-- inline 방식으로 사용하고자 할 경우 부모 태그인 div의 class에 .form-check-inline 을 추가함 -->
+            <form>
+                <div class="my-3">
+                  <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="in-chk1" name="inchk1" value="영화감상">
+                    <label for="in-chk1" class="form-check-label">영화감상</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="in-chk2" name="inchk2" value="음악감상">
+                    <label for="in-chk2" class="form-check-label">음악감상</label>
+                  </div>
+                </div>
+                <div class="my-3">
+                  <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="in-ra1" name="inra" value="영화감상">
+                    <label for="in-ra1" class="form-check-label">영화감상</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="in-ra2" name="inra" value="음악감상">
+                    <label for="in-ra2" class="form-check-label">음악감상</label>
+                  </div>
+                </div>
+                <div class="my-3">
+                  <div class="form-check form-switch form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="in-btn1" name="inbtn1" value="ON">
+                    <label for="in-btn1" class="form-check-label">안방 조명</label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="in-btn2" name="inbtn2" value="ON">
+                    <label for="in-btn2" class="form-check-label">거실 조명</label>
+                  </div>
+                </div>
+                <div class="my-3">
+                  <button type="submit" class="btn btn-primary">확인</button>
+                </div>
+              </form>
+        </div>
+
+        <br><hr><br>
+
+        <div>toggle button</div>
+        <!-- input 태그의 class에 .form-check-input 대신 .btn-check를 사용함 -->
+        <!-- input 태그에 autocomplete="off"를 추가함 -->
+        <!-- label 태그의 class에 .form-check-label 대신 .btn, btn-[테마컬러] 를 사용함 -->
+        <!-- checkbox와 radio 에 모두 사용 가능함 -->
+        <div class="my-3">
+            <input type="checkbox" class="btn-check" id="btnchk1" name="btnchk1" autocomplete="off">
+            <label for="btnchk1" class="btn btn-primary">토글 버튼</label>
+            <input type="checkbox" class="btn-check" id="btnchk2" name="btnchk2" autocomplete="off">
+            <label for="btnchk2" class="btn btn-outline-primary">outline 토글 버튼</label>
+        </div>
+        <div class="my-3">
+            <input type="radio" class="btn-check" id="btnra1" name="btnra" autocomplete="off" checked>
+            <label for="btnra1" class="btn btn-primary">토글 라디오 버튼1</label>
+            <input type="radio" class="btn-check" id="btnra2" name="btnra" autocomplete="off">
+            <label for="btnra2" class="btn btn-primary">토글 라디오 버튼2</label>
+            <input type="radio" class="btn-check" id="btnra3" name="btnra" autocomplete="off">
+            <label for="btnra3" class="btn btn-outline-primary">토글 라디오 버튼3</label>
+        </div>
+
+        <br><hr><br>
+
+        <h2>range</h2>
+        <div>
+            <h3>기본 range</h3>
+            <!-- input 태그의 class에 .form-range를 추가하여 사용함 -->
+            <!-- 부모 태그의 너비 전체를 사용하는 range를 사용할 수 있음 -->
+            <!-- step(기본값 1), min(기본값 0), max(기본값 100) 속성을 사용하여 사용할 데이터를 제한 할 수 있음 -->
+            <form>
+                <div>
+                <label for="myrange" class="form-label">부트스트랩용 range</label>
+                <input type="range" class="form-range" id="myrange" name="myrange">
+                <br>
+                <label for="myrange2" class="form-label">step, min, max 값 설정된 range</label>
+                <input type="range" class="form-range" id="myrange2" name="myrange2" min="0" max="20" step="2" value="20">          
+            </div>
+                <div class="my-3">
+                    <button type="submit" class="btn btn-primary">전송</button>
+                </div>
+
+            </form>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>file</h3>
+            <!-- 파일을 업로드하기 위한 input type="file" 도 미리 디자인되어 제공함 -->
+            <!-- input 태그의 class에 .form-control을 추가하여 사용함 -->
+            <!-- 크기 설정을 위해서 .form-control-lg, .form-control-sm을 추가하여 사용 할 수 있음 -->
+            <div class="my-3">
+                <label for="file1" class="form-label">큰 타입 파일</label>
+                <input type="file" class="form-control-lg" id="file1" name="file1">
+            </div>
+            <div class="my-3">
+                <label for="file2" class="form-label">기본 타입 파일</label>
+                <input type="file" class="form-control" id="file2" name="file2">
+            </div>
+            <div class="my-3">
+                <label for="file3" class="form-label">작은 타입 파일</label>
+                <input type="file" class="form-control-sm" id="file3" name="file3">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 사용하기</title>
+
+    <!-- 부트스트랩 로드하기 1번 -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+
+    <!-- 부트스트랩 로드하기 2번 -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+
+    <style>
+        .box {
+            height: 200px;
+            border: 1px solid black;
+            padding: 8px;
+            background-color: lightgray;
+        }
+
+        h3 {
+            box-shadow: inset 0px -0.5em 0 0 rgba(173, 255, 47, 0.7);
+            width: fit-content;
+        }
+
+        h4 {
+            box-shadow: inset 0px -0.5em 0 0 rgba(236, 236, 74, 0.5);
+            width: fit-content;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>부트스트랩 사용하기 1</h1>
+
+    <!-- 부트스트랩 기본 사용 방법 -->
+    <!-- html 태그의 class 속성에 부트스트랩에서 제공하는 class명을 입력하여 사용-->
+
+    <div>
+        <h2>container</h2>
+
+        <h3>.container</h3>
+        <div class="container box">
+            <h3>부트스트랩에서 제공하는 container 클래스 사용</h3>
+            <p>container를 사용하면 좌우에 공백이 있는 컨텐츠 공간을 제공함</p>
+        </div>
+
+        <br><br>
+
+        <h3>.container-fluid</h3>
+        <div class="container-fluid box">
+            <h3>부트스트랩에서 제공하는 container-fluid 클래스 사용</h3>
+            <p>container-fluid를 사용하면 좌우에 공백이 없는 꽉찬 화면의 공간을 제공함</p>
+        </div>
+
+        <br><br>
+
+        <h3>.container-xxl</h3>
+        <div class="container-xxl box">
+            <h3>부트스트랩에서 제공하는 container-xxl 클래스 사용</h3>
+            <p>반응형 크기를 제공하며, 좌우에 공백이 있는 컨텐츠 공간을 제공함</p>
+        </div>
+
+        <h3>.container-xl</h3>
+        <div class="container-xl box">
+            <h3>부트스트랩에서 제공하는 container-xl 클래스 사용</h3>
+            <p>반응형 크기를 제공하며, 좌우에 공백이 있는 컨텐츠 공간을 제공함</p>
+        </div>
+
+        <h3>.container-lg</h3>
+        <div class="container-lg box">
+            <h3>부트스트랩에서 제공하는 container-lg 클래스 사용</h3>
+            <p>반응형 크기를 제공하며, 좌우에 공백이 있는 컨텐츠 공간을 제공함</p>
+        </div>
+
+        <h3>.container-md</h3>
+        <div class="container-md box">
+            <h3>부트스트랩에서 제공하는 container-md 클래스 사용</h3>
+            <p>반응형 크기를 제공하며, 좌우에 공백이 있는 컨텐츠 공간을 제공함</p>
+        </div>
+
+        <h3>.container-sm</h3>
+        <div class="container-sm box">
+            <h3>부트스트랩에서 제공하는 container-sm 클래스 사용</h3>
+            <p>반응형 크기를 제공하며, 좌우에 공백이 있는 컨텐츠 공간을 제공함</p>
+        </div>
+
+        <br><br>
+        <div class="container">
+            <h3>grid-system 사용하기</h3>
+            <!-- bootstrap에서 grid system을 사용하려면 container, container-fluid 안에 있어야 함 -->
+            <!--row 클래스를 사용하여 먼저 하나의 라인을 설정하고, col을 사용하여 칸을 생성-->
+
+            <h4>col-1 로 12칸의 column 만들기</h4>
+            <div class="row border text-center text-white p-1">
+                <div class="col-1 border bg-secondary">1</div>
+                <div class="col-1 border bg-secondary">2</div>
+                <div class="col-1 border bg-secondary">3</div>
+                <div class="col-1 border bg-secondary">4</div>
+                <div class="col-1 border bg-secondary">5</div>
+                <div class="col-1 border bg-secondary">6</div>
+                <div class="col-1 border bg-secondary">7</div>
+                <div class="col-1 border bg-secondary">8</div>
+                <div class="col-1 border bg-secondary">9</div>
+                <div class="col-1 border bg-secondary">10</div>
+                <div class="col-1 border bg-secondary">11</div>
+                <div class="col-1 border bg-secondary">12</div>
+            </div>
+
+            <h4>col-2로 6칸의 column 만들기</h4>
+            <div class="row border text-center text-white p-1">
+                <div class="col-2 border bg-secondary">1</div>
+                <div class="col-2 border bg-secondary">2</div>
+                <div class="col-2 border bg-secondary">3</div>
+                <div class="col-2 border bg-secondary">4</div>
+                <div class="col-2 border bg-secondary">5</div>
+                <div class="col-2 border bg-secondary">6</div>
+            </div>
+
+            <h4>col-3으로 4칸의 column 만들기</h4>
+            <div class="row border text-center text-white p-1">
+                <div class="col-3 border bg-secondary">1</div>
+                <div class="col-3 border bg-secondary">2</div>
+                <div class="col-3 border bg-secondary">3</div>
+                <div class="col-3 border bg-secondary">4</div>
+            </div>
+
+            <h4>col-4로 3칸의 column 만들기</h4>
+            <div class="row border text-center text-white p-1">
+                <div class="col-4 border bg-secondary">1</div>
+                <div class="col-4 border bg-secondary">2</div>
+                <div class="col-4 border bg-secondary">3</div>
+            </div>
+
+            <h4>col-6로 2칸의 column 만들기</h4>
+            <div class="row border text-center text-white p-1">
+                <div class="col-6 border bg-secondary">1</div>
+                <div class="col-6 border bg-secondary">2</div>
+            </div>
+
+            <h4>col-12로 1칸의 column 만들기</h4>
+            <div class="row border text-center text-white p-1">
+                <div class="col-12 border bg-secondary">1</div>
+            </div>
+
+            <h4>col-4, col-8로 2칸의 column 만들기</h4>
+            <div class="row border text-center text-white p-1">
+                <div class="col-4 border bg-secondary">1</div>
+                <div class="col-8 border bg-secondary">2</div>
+            </div>
+
+            <h4>col-3, col-9로 2칸의 column 만들기</h4>
+            <div class="row border text-center text-white p-1">
+                <div class="col-3 border bg-secondary">1</div>
+                <div class="col-9 border bg-secondary">2</div>
+            </div>
+
+            <br><hr><br>
+
+            <div class="container">
+                <h3>col의 반응형 타입</h3>
+
+                <h4>col-xxl</h4>
+                <div class="row border p-1 text-center text-white">
+                    <!-- p-1 : padding 4px-->
+                    <div class="col-xxl-3 p-2 border bg-secondary">1</div>
+                    <div class="col-xxl-3 p-2 border bg-secondary">2</div>
+                    <div class="col-xxl-3 p-2 border bg-secondary">3</div>
+                    <div class="col-xxl-3 p-2 border bg-secondary">4</div>
+                </div>
+
+                <h4>col-xl</h4>
+                <div class="row border p-1 text-center text-white">
+                    <div class="col-xl-3 p-2 border bg-secondary">1</div>
+                    <div class="col-xl-3 p-2 border bg-secondary">2</div>
+                    <div class="col-xl-3 p-2 border bg-secondary">3</div>
+                    <div class="col-xl-3 p-2 border bg-secondary">4</div>
+                </div>
+
+                <h4>col-lg</h4>
+                <div class="row border p-1 text-center text-white">
+                    <div class="col-lg-3 p-2 border bg-secondary">1</div>
+                    <div class="col-lg-3 p-2 border bg-secondary">2</div>
+                    <div class="col-lg-3 p-2 border bg-secondary">3</div>
+                    <div class="col-lg-3 p-2 border bg-secondary">4</div>
+                </div>
+
+                <h4>col-md</h4>
+                <div class="row border p-1 text-center text-white">
+                    <div class="col-md-3 p-2 border bg-secondary">1</div>
+                    <div class="col-md-3 p-2 border bg-secondary">2</div>
+                    <div class="col-md-3 p-2 border bg-secondary">3</div>
+                    <div class="col-md-3 p-2 border bg-secondary">4</div>
+                </div>
+
+                <h4>col-sm</h4>
+                <div class="row border p-1 text-center text-white">
+                    <div class="col-sm-3 p-2 border bg-secondary">1</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">2</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">3</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">4</div>
+                </div>
+
+                <h4>col의 총합이 12를 초과할 경우</h4>
+                <div class="row border p-1 text-center text-white">
+                    <div class="col-sm-3 p-2 border bg-secondary">1</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">2</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">3</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">4</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">5</div>
+                </div>
+
+                <h4>col의 총합이 12 미만일 경우</h4>
+                <div class="row border p-1 text-center text-white">
+                    <div class="col-sm-3 p-2 border bg-secondary">1</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">2</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">3</div>
+                </div>
+
+                <h4>col의 총합이 12이고, 중간을 비워주고 싶을 경우</h4>
+                <!-- offset-{반응형크기}-{column크기} 클래스를 사용하면 중간에 지정한 크기를 비워둘 수 있음-->
+                <!-- offset은 반드시 비워둘 곳 뒤에 추가되는 태그의 class에 col과 함께 사용해야 함 -->
+                <!-- 예) <div class="col-sm-4"></div> <div class="col-sm-4 offset-sm-4"></div> -->
+                <div class="row border p-1 text-center text-white">
+                    <div class="col-sm-3 p-2 border bg-secondary">1</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">2</div>
+                    <!-- 비워지는 곳 -->
+                    <div class="col-sm-3 offset-sm-3 p-2 border bg-secondary">4</div>
+                </div>
+                <div class="row border p-1 text-center text-white">
+                    <!-- 비워지는 곳 -->
+                    <div class="col-sm-3 offset-sm-3 p-2 border bg-secondary">2</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">3</div>
+                    <div class="col-sm-3 p-2 border bg-secondary">4</div>
+                </div>
+
+                <h4>grid 사용 중 col을 하나만 사용하고 중간 정렬할 경우</h4>
+                <!-- col을 하나만 사용하고 중간 정렬 시 margin:auto를 사용함 -->
+                <!-- 부트스트랩에서는 margin-left, margin-right의 값을 auto로 설정하는 것을 mx-auto라는 클래스명으로 미리 만들어 둠 -->
+                <div class="row border p-1 text-center text-white">
+                    <div class="col-3 mx-auto p-2 bg-secondary border">중앙정렬</div>
+                </div>
+
+                <h4>반응형 크기에 따라 화면 구성을 다르게 하기</h4>
+                <!-- col-{반응형크기}-{column} 를 2개 이상 사용하여 화면의 크기에 따라서 화면 구성을 다르게 표시하는 방식 -->
+                <div class="row border p-1 text-center text-white">
+                    <div class="col-sm-6 col-md-3 p-2 bg-secondary border">1</div>
+                    <div class="col-sm-6 col-md-3 p-2 bg-secondary border">2</div>
+                </div>
+
+                <h4>col-{반응형}, col 사용하여 column 크기 자동 설정</h4>
+                <!-- col 클래스의 기본 사용 방법은 col-{크기}, col-{반응형크기}, col-{반응형크기}-{크기} 형태로 사용하지만, 
+                    col 혹은 col-{반응형크기} 만 사용 시 col 클래스의 갯수에 따라서 column의 크기를 자동으로 계산함 -->
+                <div class="row p-1 border text-center text-white">
+                    <div class="col-sm-4 border bg-secondary">1</div>
+                    <div class="col-sm-4 border bg-secondary">2</div>
+                    <div class="col-sm-4 border bg-secondary">3</div>
+                </div>
+
+                <div class="row p-1 border text-center text-white">
+                    <div class="col border bg-secondary">1</div>
+                    <div class="col border bg-secondary">2</div>
+                    <div class="col border bg-secondary">3</div>
+                    <div class="col border bg-secondary">4</div>
+                    <div class="col border bg-secondary">5</div>
+                    <div class="col border bg-secondary">6</div>
+                    <div class="col-sm-5 border bg-secondary">7</div>
+                </div>
+
+                <div class="row p-1 border text-center text-white">
+                    <div class="col-sm border bg-secondary">1</div>
+                    <div class="col-sm-6 border bg-secondary">2</div>
+                    <div class="col-sm-3 border bg-secondary">3</div>
+                </div>
+
+                
+            </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

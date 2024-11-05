@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+  <style>
+    .box:hover {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <!-- 문제2) https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm 를 클론 코딩하세요 -->
+  <header class="bg-white position-fixed top-0 w-100">
+    <div class="container">
+      <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+          <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <span class="navbar-text">My Food</span>
+          <span class="navbar-text">Mail</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mt-5">
+    <section id="food">
+      <div class="row">
+        <div class="col p-2">
+          <img src="../images/sandwich.jpg" alt="" class="d-block w-100">
+          <div class="text-center">
+            <h3 class="mt-2">The Perfect Sandwich, A Real NYC Classic</h3>
+            <p class="mt-3">Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          </div>
+        </div>
+        <div class="col p-2">
+          <img src="../images/steak.jpg" alt="" class="d-block w-100">
+          <div class="text-center">
+            <h3 class="mt-2">Let Me Tell You About This Steak</h3>
+            <p class="mt-3">Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          </div>
+        </div>
+        <div class="col p-2">
+          <img src="../images/cherries.jpg" alt="" class="d-block w-100">
+          <div class="text-center">
+            <h3 class="mt-2">Cherries, interrupted</h3>
+            <p class="mt-3">Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            <p class="mt-3">What else?</p>
+          </div>
+        </div>
+        <div class="col p-2">
+          <img src="../images/wine.jpg" alt="" class="d-block w-100">
+          <div class="text-center">
+            <h3 class="mt-2">Once Again, Robust Wine and Vegetable Pasta</h3>
+            <p class="mt-3">Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col p-2">
+          <img src="../images/popsicle.jpg" alt="" class="d-block w-100">
+          <div class="text-center">
+            <h3 class="mt-2">All I Need Is a Popsicle</h3>
+            <p class="mt-3">Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          </div>
+        </div>
+        <div class="col p-2">
+          <img src="../images/salmon.jpg" alt="" class="d-block w-100">
+          <div class="text-center">
+            <h3 class="mt-2">Salmon For Your Skin</h3>
+            <p class="mt-3">Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          </div>
+        </div>
+        <div class="col p-2">
+          <img src="../images/sandwich.jpg" alt="" class="d-block w-100">
+          <div class="text-center">
+            <h3 class="mt-2">The Perfect Sandwich, A Real Classic</h3>
+            <p class="mt-3">Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          </div>
+        </div>
+        <div class="col p-2">
+          <img src="../images/croissant.jpg" alt="" class="d-block w-100">
+          <div class="text-center">
+            <h3 class="mt-2">Le French</h3>
+            <p class="mt-3">Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+        </ul>
+      </div>
+    </section>
+    <hr class="my-5">
+    <section id="about">
+      <h3 class="text-center">About Me, The Food Man</h3>
+      <div class="mx-auto mt-5" style="max-width: 800px;">
+        <img src="../images/chef.jpg" alt="" class="w-100">
+      </div>
+      <h4 class="text-center mt-4">I am Who I Am!</h4>
+      <p class="text-center mt-3 fst-italic">With Passion For Real, Good Food</p>
+      <p class="text-center mt-3">Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    </section>
+  </main>
+
+  <hr class="container my-5">
+
+  <footer class="container my-5">
+    <div class="row">
+      <div class="col px-3">
+        <h3>FOOTER</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p>made by fullstack 405</p>
+      </div>
+      <div class="col px-3">
+        <h3>BLOG POSTS</h3>
+        <div class="">
+          <div class="d-flex px-3 box">
+            <img src="../images/workshop.jpg" alt="" style="width: 50px; height: auto;">
+            <div class="ms-3">
+              <span>Lorem</span><br>
+              <span>Sed mattis nunc</span>
+            </div>
+          </div>
+          <hr>
+          <div class="d-flex px-3 box">
+            <img src="../images/gondol.jpg" alt="" style="width: 50px; height: auto;">
+            <div class="ms-3">
+              <span>Lorem</span><br>
+              <span>Sed mattis nunc</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col px-3">
+        <h3>POPULAR TAGS</h3>
+        <span class="badge bg-secondary">Travel</span>
+        <span class="badge bg-secondary">New York</span>
+        <span class="badge bg-secondary">Dinner</span>
+        <span class="badge bg-secondary">Salmon</span>
+        <span class="badge bg-secondary">France</span>
+        <br>
+        <span class="badge bg-secondary">Drinks</span>
+        <span class="badge bg-secondary">Ideas</span>
+        <span class="badge bg-secondary">Flavors</span>
+        <span class="badge bg-secondary">Cuisine</span>
+        <span class="badge bg-secondary">Chicken</span>
+        <br>
+        <span class="badge bg-secondary">Dressing</span>
+        <span class="badge bg-secondary">Fried</span>
+        <span class="badge bg-secondary">Fish</span>
+        <span class="badge bg-secondary">Duck</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="offcanvas offcanvas-start" id="menu">
+    <div class="offcanvas-body p-0">
+      <div class="d-grid">
+        <button type="button" class="btn btn-outline-secondary border-0 rounded-0 fs-3 text-start p-3" data-bs-dismiss="offcanvas">Close Menu</button>
+        <a href="#food" class="btn btn-outline-secondary border-0 rounded-0 fs-3 text-start p-3">Food</a>
+        <a href="#about" class="btn btn-outline-secondary border-0 rounded-0 fs-3 text-start p-3">About</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

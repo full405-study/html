@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩13</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>input group</h2>
+
+        <div>
+            <h3>기본 input group</h3>
+            <!-- 부트스트랩에서 제공하는 input 태그와 다른 태그를 하나로 합하여 한개의 태그인 것 처럼 보여주는 방식 -->
+            <!-- 부모 태그로 div 태그를 사용하고 class에 .input-group을 추가하여 사용함 -->
+            <!-- 자식 태그로 input 태그와 label 대신 span 태그를 사용함 -->
+            <!-- span 태그는 input 태그 앞 혹은 뒤에 사용할 수 있음 -->
+            <!-- span 태그의 class에 .input-group-text 를 추가하여 사용 -->
+            <!-- input 태그의 class에 .form-control 을 추가하여 사용 -->
+            <!-- 크기 설정을 위해 div 태그의 class에 .input-group-lg, .input-group-sm을 추가하여 사용함 -->
+            <form>
+                <div class="my-3 input-group input-group-lg">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" id="txt1" name="txt1" placeholder="큰 형태의 input group">
+                </div>
+                <div class="my-3" input-group>
+                    <span class="input-group-text">사용자 ID</span>
+                    <input type="text" class="form-control" id="userid" name="userid" placeholder="사용자 ID를 입력하세요">
+                </div>
+                <div class="my-3 input-group input-group-sm">
+                    <span class="input-group-text">비밀번호</span>
+                    <input type="password" class="form-control" id="userpw" name="userpw" placeholder="비밀번호를 입력하세요">
+                </div>
+                <div class="my-3 input-group">
+                    <input type="text" class="form-control" id="text2" name="text2" placeholder="span 뒤에 입력">
+                    <span class="input-group-text">뒤에 입력한 input group</span>
+                </div>
+                <button type="submit" class="btn btn-primary">전송</button>
+            </form>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>mutiple input group</h3>
+            <!-- input group 사용 시 부모 태그인 div 태그의 자식태그로 
+                span 태그나 input 태그를 여러개 사용할 수 있음 -->
+                <form>
+                    <div class="my-3 input-group">
+                        <span class="input-group-text">이름 : </span>
+                        <input type="text" class="form-control" id="username1" name="username1" placeholder="성을 입력하세요">
+                        <input type="text" class="form-control" id="username2" name="username2" placeholder="이름을 입력하세요">
+                    </div>
+                    <div class="my-3 input-group">
+                        <span class="input-group-text">one</span>
+                        <span class="input-group-text">tow</span>
+                        <span class="input-group-text">three</span>
+                        <input type="text" class="form-control" id="txt3" name="txt3"s>
+                    </div>
+                    <div class="my-3">
+                        <button type="submit" class="btn btn-primary">전송</button>
+                    </div>
+                </form>
+        </div>
+    
+
+        <br><hr><br>
+
+        <div>
+            <h3>input group에 checkbox, radio 사용</h3>
+            <!-- span 태그 대신 div 태그를 사용하고, class에 .input-group-text를 추가하여 사용함 -->
+            <!-- .input-group-text를 사용한 div 태그의 자식 태그로 input 태그를 사용하며, type을 checkbox, radio를 사용함 -->
+            <!-- 텍스트를 입력할 input 태그는 그대로 사용함 -->
+
+            <div class="my-3">
+                <div class="my-2 input-group">
+                    <div class="input-group-text">
+                        <input type="checkbox">
+                    </div>
+                    <input type="text" class="form-control" placeholder="input group에 checkbox 사용 1">
+                </div>
+                <div class="my-2 input-group">
+                    <div class="input-group-text">
+                        <input type="checkbox"> 
+                    </div>
+                    <input type="text" class="form-control" placeholder="input group에 checkbox 사용 2">
+                </div>
+            </div>
+            <div class="my-3">
+                <div class="my-2 input-group">
+                    <div class="input-group-text">
+                        <input type="radio" name="radio">
+                    </div>
+                    <input type="text" class="form-control" placeholder="input group에 radio 사용 1">
+                </div>
+                <div class="my-2 input-group">
+                    <div class="input-group-text">
+                        <input type="radio" name="radio"> 
+                    </div>
+                    <input type="text" class="form-control" placeholder="input group에 radio 사용 2">>
+                </div>
+            </div>
+
+
+            <br><hr><br>
+
+            <div>
+                <h3>input group에 button 사용하기</h3>
+                <!-- input group의 span 태그 대신 button 태그를 사용할 수 있음 -->
+                <!-- 부모 태그인 div의 자식 태그로 button 태그를 사용하고 class에 .btn .btn-{테마컬러}를 사용함 -->
+                <!-- input 태그는 동일하게 사용함 -->
+                <!-- 버튼 태그도 여러개 사용 가능하며, input 태그 앞 혹은 뒤에 사용할 수 있음 -->
+                <!-- input group에 드롭다운 버튼도 사용할 수 있음 -->
+                <!-- button 태그의 class에 .dropdown-toggle 을 추가하고, 사용자 속성 data-bs-toggle="dropdown"을 추가함 -->
+                <!-- button 태그의 형제 태그로 ul 태그를 추가하고, class에 .dropdown-menu 를 추가함 -->
+                <!-- ul 태그의 자손 태그 a 태그를 추가하고 class에 .dropdown-item 을 추가함-->
+
+                <div class="my-3 input-group">
+                    <button type="button" class="btn btn-primary">버튼</button>
+                    <input type="text" class="form-control" placeholder="input group 에 버튼 사용">
+                </div>
+                <div class="my-3 input-group">
+                    <input type="text" class="form-control" placeholder="input 뒤에 버튼 사용">
+                    <button type="button" class="btn btn-outline-primary">outline 버튼</button>
+                </div>
+                <div class="my-3 input-group">
+                    <input type="text" class="form-control" placeholder="input 뒤에 버튼 사용">
+                    <button type="button" class="btn btn-outline-primary">확인</button>
+                    <button type="button" class="btn btn-outline-secondary">취소</button>
+                </div>
+                <div class="my-3 input-group">
+                    <input type="text" class="form-control" placeholder="input group에 드롭다운 버튼 사용">
+                    <button type="button" class="btn btn-primary">버튼</button>
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown"></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">서브메뉴 1</a></li>
+                        <li><a href="#" class="dropdown-item">서브메뉴 2</a></li>
+                        <li><a href="#" class="dropdown-item">서브메뉴 3</a></li>
+                    </ul>
+                </div>
+                <div class="my-3 input-group">
+                    <input class="input-group-text" placeholder="선택">
+                    <select name="" id="" class="form-select">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                </div>
+
+        </div>
+
+            <br><hr><br>
+
+            <h2>floating label</h2>
+
+            <div>
+                <h3>기본 floating label</h3>
+                <!-- 부트스트랩에서 input 태그 사용 시 label을 보통 input 태그 위에 위치시키는데, floating label 을 사용하면
+                input 태그 안에 label이 적용되어 있다가 텍스트 입력 시 label이 작아지는 형태의 label -->
+                <!-- 부모 태그인 div의 class에 .form-floating 을 추가하여 사용함 -->
+                <!-- 자식 태그로 input 태그와 label 태그를 사용하고 순서가 input 태그 먼저 위치하고 label이 나중에 위치함 -->
+                <!-- textarea 태그 및 select 태그에서도 사용할 수 있음 -->
+                <!-- textarea 태그에 floating label을 사용 시 rows 속성 사용할 수 없음, css의 height 속성으로 높이를 지정해야 함 -->
+
+                <form>
+                    <div class="my-3 form-floating">
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email..">
+                        <label for="email">Email..</label>
+                    </div>
+                    <div class="my-3 form-floating">
+                        <input type="password" class="form-control" id="pwd" name="pwd" placeholder="비밀번호">
+                        <label for="pwd">비밀번호</label>
+                    </div>
+                    <div class="my-3 form-floating">
+                        <select name="sel" id="sel" class="form-select">
+                            <option>1</option>
+                            <option selected>2</option>
+                            <option>3</option>
+                        </select>
+                        <label for="sel">보기 중 하나만 선택하기</label>
+                    </div>
+                    <div class="my-3 form-floating">
+                        <textarea name="comments" id="comments" class="form-control" placeholder="textarea에 floating label 적용하기" style="height: 100px;"></textarea>
+                        <label for="comments">입력..</label>
+                    </div>
+                    <div class="my-3">
+                        <button type="submit" class="btn btn-primary">전송</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

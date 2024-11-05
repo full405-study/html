@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 사용하기 16</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+  <style>
+    .box {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: #f9f9f9;
+      margin: 8px;
+    }
+  </style>
+</head> 
+<body>
+  <div class="container">
+    <h2>부트스트랩 helper class</h2>
+
+    <div>
+      <h3>border</h3>
+      <!-- 부트스트랩에서 제공하는 border 속성을 쉽게 사용하기 위해 적용된 class -->
+      <!-- 원하는 태그의 class에 .border 추가하여 적용 -->
+      <!-- .border-0, .border-top-0, .border-end-0, .border-bottom-0, .border-start-0 을 추가하여 
+            테두리 선이 없는 형태로 사용할 수 있음 -->
+      <!-- .border-{방향} 을 대신 사용하여 원하는 부분만 테두리 선을 사용할 수 있음-->
+      <!-- .border-{숫자} 를 추가하여 테두리선의 굵기를 설정할 수 있음 (0 ~ 5) -->
+      <!-- .border-{테마컬러} 를 추가하여 테두리선에 테마컬러를 적용할 수 있음 -->
+
+      <span class="box"></span>
+      <span class="box border"></span>
+      <span class="box border border-0"></span>
+      <br><br>
+      <span class="box border border-top-0"></span>
+      <span class="box border border-end-0"></span>
+      <span class="box border border-bottom-0"></span>
+      <span class="box border border-start-0"></span>
+      <br><br>
+      <span class="box border-top"></span>
+      <span class="box border-end"></span>
+      <span class="box border-bottom"></span>
+      <span class="box border-start"></span>
+      <br><br>
+      <span class="box border border-0"></span>
+      <span class="box border border-1"></span>
+      <span class="box border border-2"></span>
+      <span class="box border border-3"></span>
+      <span class="box border border-4"></span>
+      <span class="box border border-5"></span>
+      <br><br>
+      <span class="box border border-primary border-3"></span>
+      <span class="box border border-secondary border-3"></span>
+      <span class="box border border-success border-3"></span>
+      <span class="box border border-info border-3"></span>
+      <span class="box border border-warning border-3"></span>
+      <span class="box border border-danger border-3"></span>
+      <span class="box border border-dark border-3"></span>
+      <div class="p-1 bg-dark">
+        <span class="box border border-light border-3 text-bg-dark">light</span>
+        <span class="box border border-white border-3 text-bg-dark">white</span>
+      </div>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>border radius</h3>
+      <!-- 부트스트랩에서 border radius를 쉽게 사용할 수 있도록 class를 미리 지정함 -->
+      <!-- 원하는 태그의 class에 .rounded 를 추가하여 사용함 -->
+      <!-- .rounded-{방향}, .rounded-{숫자 0 ~ 5}, .rounded-circle, .rounded-pill 을 대신 사용할 수 있음 -->
+      <!-- .rounded-{방향} 은 원하는 방향에만 라운드 처리를 함 -->
+      <!-- .rounded-{0~5} 은 라운드 처리 크기를 설정함 -->
+      <!-- .rounded-circle 은 원형으로 표시함 -->
+      <!-- .rounded-pill 은 해당 태그가 직사각형일 경우 알약 모양으로 표시함 -->
+
+      <span class="box bg-dark rounded"></span>
+      <span class="box bg-dark rounded-top"></span>
+      <span class="box bg-dark rounded-end"></span>
+      <span class="box bg-dark rounded-bottom"></span>
+      <span class="box bg-dark rounded-start"></span>
+      <br><br>
+      <span class="box bg-dark rounded-circle"></span>
+      <span class="box bg-dark rounded-pill" style="width: 200px;"></span>
+      <br><br>
+      <span class="box bg-dark rounded-0"></span>
+      <span class="box bg-dark rounded-1"></span>
+      <span class="box bg-dark rounded-2"></span>
+      <span class="box bg-dark rounded-3"></span>
+      <span class="box bg-dark rounded-4"></span>
+      <span class="box bg-dark rounded-5"></span>
+    </div>
+    
+
+    <br><hr><br>
+
+    <div>
+      <h3>clearfix</h3>
+      <!-- 부트스트랩에서 float과 clear-fix 형태를 쉽게 사용할 수 있도록 미리 class를 정의함 -->
+      <!-- float은 사용하려는 태그의 class에 .float-start, .float-end 를 추가하여 사용 -->
+      <!-- clearfix는 float을 사용하는 태그의 부모 태그의 class에 .clearfix 를 추가하여 사용함 -->
+
+      <h4>css로 clear-fix 사용</h4>
+      <style>
+        #use-float::after {
+          content: "";
+          clear: both;
+          display: block;
+        }
+      </style>
+      <div id="use-float">
+        <button type="button" class="btn btn-primary" style="float: left;">왼쪽</button>
+        <button type="button" class="btn btn-success" style="float: right;">오른쪽</button>
+      </div>
+      <br><br>
+      <h4>부트스트랩의 clearfix 사용</h4>
+      <div class="clearfix">
+        <button type="button" class="btn btn-primary float-start">왼쪽</button>
+        <button type="button" class="btn btn-success float-end">오른쪽</button>
+      </div>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>widht, height % 로 입력</h3>
+      <!-- 부트스트랩에서 부모태그의 width, height에 비교하여 자식 태그의 width, height를 %로 입력 시
+           자주 사용하는 %를 class로 미리 정의함 -->
+      <!-- .w-25, .w-50, .w-75, w-100, .w-auto 가 존재하며 width를 %로 입력함 -->
+      <!-- .h-25, .h-50, .h-75, h-100, .h-auto 가 존재하며 height를 %로 입력함 -->
+      <!-- max-width, max-height도 .mw-100,.mh-100 으로 미리 정의함 -->
+      <div style="width: 1000px;" class="bg-secondary">
+        <div class="w-25 bg-warning">width 25%</div>
+        <div class="w-50 bg-warning">width 50%</div>
+        <div class="w-75 bg-warning">width 75%</div>
+        <div class="w-100 bg-warning">width 100%</div>
+        <div class="w-auto bg-warning">width auto</div>
+        <div class="mw-100 bg-warning">max-width 100%</div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <div style="height: 400px;" class="bg-secondary">
+      <div class="h-25 d-inline-block bg-warning">height 25%</div>
+      <div class="h-50 d-inline-block bg-warning">height 50%</div>
+      <div class="h-75 d-inline-block bg-warning">height 75%</div>
+      <div class="h-100 d-inline-block bg-warning">height 100%</div>
+      <div class="h-auto d-inline-block bg-warning">height auto</div>
+      <div class="mh-100 d-inline-block bg-warning" style="height: 500px;">max-height 100%</div>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>margin, padding</h3>
+      <!-- 부트스트랩에서 margin, padding을 쉽게 사용할 수 있도록 미리 정의함 -->
+      <!-- 원하는 태그의 class에 .{속성명}{방향}-{크기} 형태로 사용함 -->
+      <!-- 반응형 웹을 지원하여 .{속성명}{방향}-{반응형크기}-{크기} 형태로 사용함 -->
+      <!-- m : margin 을 의미 -->
+      <!-- p : padding 을 의미 -->
+
+      <!-- t : top -->
+      <!-- b : bottom -->
+      <!-- s : start, left -->
+      <!-- e : end, right -->
+      <!-- x : start~end, left~right -->
+      <!-- y : top~bottom -->
+      <!-- 만약 t, b, s, e, x, y 를 사용하지 않으면 4개 방향에 모두 적용 -->
+
+      <!-- 0 : 0px -->
+      <!-- 1 : 0.25rem, 4px -->
+      <!-- 2 : 0.5rem, 8px -->
+      <!-- 3 : 1rem, 16px -->
+      <!-- 4 : 1.5rem, 24px -->
+      <!-- 5 : 3rem, 48px -->
+      <!-- auto : 자동 -->
+
+      <div class="box text-bg-primary d-block m-0 p-0">박스 1</div>
+      <div class="box text-bg-success d-block mt-0 p-0">박스 2</div>
+      <div class="box text-bg-info d-block mt-1 ps-1">박스 3</div>
+      <div class="box text-bg-secondary d-block mt-2 ps-2">박스 4</div>
+      <div class="box text-bg-warning d-block mt-3 ps-3">박스 5</div>
+      <div class="box text-bg-danger d-block mt-4 ps-4">박스 6</div>
+      <div class="box text-bg-dark d-block mt-5 ps-5">박스 7</div>
+
+      <div class="box d-block mx-auto text-bg-primary"></div>
+      
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>visible</h3>
+      <!-- 부트스트랩에서 css의 visibility 속성을 쉽게 사용할 수 있도록 미리 정의함 -->
+      <!-- 원하는 태그의 class에 .visible, .invisible 을 사용하여 태그를 보이거나 안보이게 할 수 있음 -->
+
+      <span class="box bg-primary visible">visible</span>
+      <span class="box bg-primary invisible">invisible</span>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>display</h3>
+      <!-- 부트스트랩에서 display 속성을 쉽게 사용하도록 미리 정의함 -->
+      <!-- 원하는 태그의 class에 .d-block, .d-inline, .d-inline-block, .d-flex, .d-grid 를 추가하여 사용함 -->
+
+      <div class="border border-3 d-inline">div 태그이고 inline 방식</div>
+      <span class="border border-3 d-block">span 태그이고 block 방식</span>
+      <span class="border border-3 d-inline-block m-5">span 태그이고 inline-block 방식</span>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>font 관련</h3>
+      <!-- 부트스트랩에서 font 관련 속성을 쉽게 사용할 수 있도록 미리 정의함 -->
+      <!-- .fs-{크기} 형태로 사용, 1 ~ 6 까지 존재 -->
+      <!-- .fw-bold, .fw-normal, .fw-light class를 사용하여 폰트 굵기 설정 -->
+      <!-- .fst-italic, .fst-normal class를 사용하여 이탤릭체 사용-->
+      <p class="fs-1">안녕하세요</p>
+      <p class="fs-2">안녕하세요</p>
+      <p class="fs-3">안녕하세요</p>
+      <p class="fs-4">안녕하세요</p>
+      <p class="fs-5">안녕하세요</p>
+      <p class="fs-6">안녕하세요</p>
+      <p class="fw-bold">안녕하세요</p>
+      <p class="fst-italic">안녕하세요</p>
+    </div>
+
+
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

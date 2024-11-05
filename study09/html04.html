@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 사용하기 9</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>드롭다운 버튼</h2>
+
+        <div>
+            <h3>기본 드롭다운 버튼</h3>
+            <!--부트스트랩에서 일반 버튼을 클릭 시 하위 메뉴가 출력되는 형태의 드롭다운 버튼을 디자인하여 제공함-->
+            <!--부모 태그로 div를 사용하고 class에 .dropdown을 사용함-->
+            <!--자식 태그로 button 태그와 ul 태그를 사용함-->
+            <!--button 태그의 class에 .dropdown-toggle 을 추가하고, 사용자 속성으로 data-bs-toggle="dropdown"을 추가함-->
+            <!--ul 태그의 class에 .dropdown-menu 를 추가하여 하위 메뉴를 설정함-->
+            <!--li 태그의 자식 태그로 a 태그를 사용하고, class에 .dropdown-item 을 추가하여 사용함-->
+
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드롭다운버튼</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">메뉴1</a></li>
+                    <li><a href="#" class="dropdown-item">메뉴2</a></li>
+                    <li><a href="#" class="dropdown-item">메뉴3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>서브 메뉴 분배, 서브 메뉴 헤더, 서브 메뉴 활성화/비활성화</h3>
+            <!--li 태그의 자식 태그로 hr 태그를 사용하고 class에 .dropdown-divider 를 추가함-->
+            <!--서브 메뉴를 관계 있는 메뉴끼리 구분하여 사용할 수 있는 구분선이 추가됨-->
+
+            <!--li 태그의 자식 태그로 h{숫자} 태그를 사용하고, class에 .dropdown-header 를 추가함-->
+            <!--서브 메뉴의 제목을 지정할 수 있음-->
+
+            <!--li 태그의 자식 태그인 a 태그의 class에 .active, .disabled 를 사용하여 서브메뉴를 활성/비활성할 수 있음-->
+
+            <div class="dropdown">
+                <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">드롭다운</button>
+                <ul class="dropdown-menu">
+                    <li><h5 class="dropdown-header">서브 메뉴 제목, dropdown-header</h5></li>
+                    <li><a href="#" class="dropdown-item active">서브 메뉴 1</a></li>
+                    <li><a href="#" class="dropdown-item disabled">서브 메뉴 2</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><h5 class="dropdown-header">서브 메뉴 제목2</h5></li>
+                    <li><a href="#" class="dropdown-item">메뉴 3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>드롭다운 서브 메뉴 출력 위치</h3>
+            <!--드롭다운 버튼의 서브 메뉴를 사용자가 원하는 위치로 출력할 수 있음-->
+            <!--부모인 div 태그의 class에 .dropstart, .dropend, .dropup-->
+            <!--.dropstart, .dropend, .dropup은 서브 메뉴의 위치 자체가 버튼의 상하좌우로 움직임-->
+
+            <!--ul 태그의 class에 .dropdown-menu-end 를 추가하여 서브 메뉴의 가로 정렬 위치를 변경할 수 있음-->
+            <!--.dropdown-menu-end 는 서브 메뉴의 위치는 버튼의 하단으로 지정되어 있고 가로 정렬 위치만 오른쪽으로 이동함-->
+
+            <div class="dropdown mt-2">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">기본 드롭다운 버튼</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">서브 메뉴 1</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 2</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 3</a></li>
+                </ul>
+            </div>
+            <div class="dropdown dropstart mt-2">
+                <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">drop-start 드롭다운 버튼</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">서브 메뉴 1</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 2</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 3</a></li>
+                </ul>
+            </div>
+            <div class="dropdown dropend mt-2">
+                <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">drop-end 드롭다운 버튼</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">서브 메뉴 1</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 2</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 3</a></li>
+                </ul>
+            </div>
+            <div class="dropdown dropup mt-2">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">drop-up 드롭다운 버튼</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">서브 메뉴 1</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 2</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 3</a></li>
+                </ul>
+            </div>
+            <br>
+            <div class="dropdown mt-2">
+                <button type="button" class="btn btn-info dropdown-toggle text-bg-light" data-bs-toggle="dropdown">기본 드롭다운 버튼 사용하여 가로 정렬이 왼쪽</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">서브 메뉴 1</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 2</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 3</a></li>
+                </ul>
+            </div>
+            <div class="dropup mt-2">
+                <button type="button" class="btn btn-secondary dropdown-toggle text-bg-light" data-bs-toggle="dropdown">dropdown-menu-end 드롭다운 버튼 사용하여 가로 정렬이 오른쪽</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a href="#" class="dropdown-item">서브 메뉴 1</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 2</a></li>
+                    <li><a href="#" class="dropdown-item">서브 메뉴 3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>버튼 그룹 안에 있는 드롭 다운 버튼</h3>
+            <!--기존 버튼 그룹의 멤버로 드롭 다운 버튼을 사용-->
+            <!--button 대신 class가 .dropdown인 div 태그를 사용하여 구현함-->
+            <!--부모 태그로 div를 사용하고 class에 .btn-group 를 사용-->
+            <!--자식 태그로 button 태그를 추가함-->
+            <!--드롭 다운 버튼이 들어갈 부분에 button 태그 대신 .btn-group class를 사용한 div 태그를 추가함-->
+            <!--드롭 다운 버튼에 button 태그와 ul 태그를 추가하여 드롭 다운 버튼을 구현함-->
+            <!--세로로 된 버튼 그룹에 드롭 다운 버튼 사용 시 부모 태그에 .btn-group 대신 .btn-group-vertical을 사용-->
+
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-danger">아이폰</button>
+                <button type="button" class="btn btn-warning">애플워치</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">맥</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">맥북에어</a></li>
+                        <li><a href="#" class="dropdown-item">맥북프로</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

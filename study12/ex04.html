@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 UI 그리기 4</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <h2 class="mt-2">W3.CSS Login Modal</h2>
+    <button type="button" class="mt-2 btn btn-lg text-bg-success rounded-0" data-bs-toggle="modal" data-bs-target="#exmodal">
+      Login
+    </button>
+
+    <div class="modal" id="exmodal">
+      <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+          <!-- modal header -->
+          <div class="container-fluid">
+            <button type="button" class="btn-close float-end mt-2" data-bs-dismiss="modal"></button>
+            <div class="modal-header mt-4 border-0">
+              <img src="../study12/images/img_avatar4.png" alt="" class="rounded-circle mx-auto" style="width: 35%;">
+            </div>
+          </div> 
+          <!-- modal body -->
+          <div class="modal-body">
+            <form>
+              <div class="my-3">
+                <label for="user-id" class="form-label fw-bold">Username</label>
+                <input type="text" class="form-control" id="user-id" name="userId" placeholder="Enter Username">
+              </div>
+              <form>
+                <div class="my-3">
+                  <label for="user-pw" class="form-label fw-bold">Password</label>
+                  <input type="password" class="form-control" id="user-pw" name="userPw" placeholder="Enter Password">
+                </div>
+                <div class="my-3">
+                    <button type="submit" class="btn btn-success rounded-0 w-100">Login</button>
+                </div>
+                <div class="my-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="remember" name="remember" value="remember">
+                  <label for="remember" class="form-check-label">Remember me</label>
+                </div>
+              </form>
+            </form>
+          </div>
+          <!-- modal footer -->
+          <div class="d-flex justify-content-between modal-footer bg-secondary-subtle border-secondary-subtle">           
+            <button type="button" class="btn btn-danger rounded-0" data-bs-dismiss="modal">닫기</button>
+            <span>Forget <a href="#" class="link-dark">password?</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리 사용하기</title>
+    <style>
+        body {
+            background-color: yellowgreen;
+        }
+
+        /* 576px, 768px, 992px, 1200px */
+        /* min-width : 지정한 너비보다 클 때, 모바일퍼스트(모바일 화면을 기본 화면으로 사용 시)*/
+        /* max-width : 지정한 너비보다 작을 때, PC화면을 기본 화면으로 사용 시 */
+        /* min-width와 max-width를 섞어서 사용하는 것은 좋지 않음 */
+
+        @media screen and (min-width: 576px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                background-color: lightskyblue;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            body {
+                background-color: aquamarine;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h2>미디어쿼리 사용하기</h2>
+    </div>
+</body>
+</html>

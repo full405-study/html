@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>응용용용용</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>드롭다운 버튼</h2>
+
+        <div>
+            <h3>기본 드롭다운 버튼</h3>
+            <!--부트스트랩에서 일반 버튼을 클릭 시 하위 메뉴가 출력되는 형태의 드롭다운 버튼을 디자인하여 제공함-->
+            <!--부모 태그로 div를 사용하고 class에 .dropdown을 사용함-->
+            <!--자식 태그로 button 태그와 ul 태그를 사용함-->
+            <!--button 태그의 class에 .dropdown-toggle 을 추가하고, 사용자 속성으로 data-bs-toggle="dropdown"을 추가함-->
+            <!--ul 태그의 class에 .dropdown-menu 를 추가하여 하위 메뉴를 설정함-->
+            <!--li 태그의 자식 태그로 a 태그를 사용하고, class에 .dropdown-item 을 추가하여 사용함-->
+
+            <div class="dropdown">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">드롭다운버튼</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">1</a></li>
+                        <li><a href="#" class="dropdown-item">2</a></li>
+                        <li><a href="#" class="dropdown-item">3</a></li>
+                    </ul>
+                
+            </div>
+
+            <br><hr><br>
+
+            <div>
+                <h3>서브 메뉴 분배, 서브 메뉴 헤더, 서브 메뉴 활성화/비활성화</h3>
+
+                <div class="dropdown">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">배고파</button>
+                        <ul class="dropdown-menu">
+                            <li><h5 class="dropdown-header">뭐묵지</h5></li>
+                            <li><a href="#" class="dropdown-item">보끔밥</a></li>
+                            <li><a href="#" class="dropdown-item">라면</a></li>
+                            <li><a href="#" class="dropdown-item">굶어</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h5 class="dropdown-header">뭐해야하지</h5></li>
+                            <li><a href="#" class="dropdown-item">청소</a></li>
+                            <li><a href="#" class="dropdown-item">빨래</a></li>
+                            <li><a href="#" class="dropdown-item">냥빗</a></li>
+                        </ul>
+                </div>
+
+                <br><hr><br>
+
+                <div>
+                    <h3>드롭다운 서브 메뉴 출력 위치</h3>
+                    <div class="dropdown dropstart mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">배고파</button>
+                            <ul class="dropdown-menu">
+                                <li><h5 class="dropdown-header">뭐묵지</h5></li>
+                                <li><a href="#" class="dropdown-item">보끔밥</a></li>
+                                <li><a href="#" class="dropdown-item">라면</a></li>
+                                <li><a href="#" class="dropdown-item">굶어</a></li>
+                            </ul>
+                    </div>
+                    <div class="dropdown dropup mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">배고파</button>
+                            <ul class="dropdown-menu">
+                                <li><h5 class="dropdown-header">뭐묵지</h5></li>
+                                <li><a href="#" class="dropdown-item">보끔밥</a></li>
+                                <li><a href="#" class="dropdown-item">라면</a></li>
+                                <li><a href="#" class="dropdown-item">굶어</a></li>
+                            </ul>
+                    </div>
+                    <div class="dropdown dropend mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">배고파</button>
+                            <ul class="dropdown-menu">
+                                <li><h5 class="dropdown-header">뭐묵지</h5></li>
+                                <li><a href="#" class="dropdown-item">보끔밥</a></li>
+                                <li><a href="#" class="dropdown-item">라면</a></li>
+                                <li><a href="#" class="dropdown-item">굶어</a></li>
+                            </ul>
+                    </div>
+                    <br><br>
+
+                    <div class="dropdown mt-2">
+                        <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">무~~~~~~~~~~~~~~~~~~~~~</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">야</a></li>
+                            <li><a href="#" class="dropdown-item">호</a></li>
+                        </ul>
+                    <div class="dropdown mt-2">
+                        <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">무~~~~~~~~~~~~~~~~~~~~~</button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="#" class="dropdown-item">야</a></li>
+                            <li><a href="#" class="dropdown-item">호</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <br><hr><br>
+
+                <div>
+                    <h3>버튼 그룹 안에 있는 드롭 다운 버튼</h3>
+
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-danger">무</button>
+                        <button type="button" class="btn btn-success">야</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">호</button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">그런건</a></li>
+                                <li><a href="#" class="dropdown-item">저희가 많이보죠</a></li>
+                            </ul>
+                        </div>    
+                    </div>
+                </div>
+                
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

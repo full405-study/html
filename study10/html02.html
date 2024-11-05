@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 사용하기 11</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>프로그레스 바 사용하기</h2>
+
+    <div>
+      <h3>기본 프로그레스 바</h3>
+      <!-- 각종 진행 상태를 표시하는 프로그레스 바를 부트스트랩에서 디자인하여 제공함 -->
+      <!-- div 태그를 부모 태그와 자식 태그로 구성하여 사용함 -->
+      <!-- 부모 div 의 class에 .progress 를 추가하여 사용 -->
+      <!-- 자식 div 의 class에 .progress-bar 를 추가하고, css의 width 속성에 %로 값을 설정하여 진행 상태를 표현 -->
+      <!-- 부모 div의 width 에 의해서 전체 프로그레스바의 크기를 설정함 -->
+      <!-- 자식 div의 width 에 의해서 진행 상태를 설정할 수 있음 -->
+      <!-- 부모 div의 height 에 의해서 전체 프로그레스바의 높이를 설정함(기본 높이는 1rem으로 설정됨) -->
+      <div class="progress mb-2">
+        <div class="progress-bar" style="width: 70%;"></div>
+      </div>
+
+      <div class="progress mb-2" style="height: 10px;">
+        <div class="progress-bar" style="width: 30%;"></div>
+      </div>
+
+      <div class="progress mb-2" style="height: 20px;">
+        <div class="progress-bar" style="width: 60%;"></div>
+      </div>
+
+      <div class="progress mb-2" style="height: 30px;">
+        <div class="progress-bar" style="width: 90%;"></div>
+      </div>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>프로그레스 바에 글자 입력, 테마 컬러 사용, 빗살 무늬 넣기, 애니메이션 사용하기</h3>
+      <!-- 자식 div의 시작 태그와 끝 태그 사이에 텍스트를 입력 시 프로그레스 바 중앙에 입력한 텍스트가 표시됨 -->
+      <!-- 자식 div의 class에 .bg-{테마컬러} 를 추가 시 테마 컬러를 사용한 프로그레스 바를 출력할 수 있음 -->
+      <!-- 자식 div의 class에 .progress-bar-striped 를 추가하여 빗살 무늬가 추가된 프로그레스 바를 사용할 수 있음 -->
+      <!-- 빗살 무늬가 적용된 프로그레스 바의 class에 .progress-bar-animated 를 추가하여 빗살 무늬가 움직이는 프로그레스 바를 사용할 수 있음 -->
+
+      <h4>프로그레스 바에 텍스트 입력하기</h4>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-primary" style="width: 10%;">10%, 기본색상</div>
+      </div>
+      <br><br>
+      <h4>프로그레스 바에 테마 색상 설정</h4>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-secondary" style="width: 20%;">20%, bg-secondary</div>
+      </div>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-success" style="width: 30%;">30%, bg-success</div>
+      </div>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-info" style="width: 40%;">40%, bg-info</div>
+      </div>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-warning" style="width: 50%;">50%, bg-warning</div>
+      </div>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-danger" style="width: 60%;">60%, bg-danger</div>
+      </div>
+      <div class="progress mb-2">
+        <div class="progress-bar text-bg-light" style="width: 70%;">70%, bg-light</div>
+      </div>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-dark" style="width: 80%;">80%, bg-dark</div>
+      </div>
+      <br><br>
+      <h4>프로그레스 바에 빗살 무늬 넣기</h4>
+      <div class="progress mb-2" style="height: 30px;">
+        <div class="progress-bar progress-bar-striped" style="width: 40%;">빗살 무늬 사용</div>
+      </div>
+      <div class="progress mb-2" style="height: 30px;">
+        <div class="progress-bar bg-info progress-bar-striped" style="width: 40%;">빗살 무늬 사용</div>
+      </div>
+      <br><br>
+      <h4>프로그레스 바에 애니메이션 사용하기</h4>
+      <div class="progress mb-2" style="height: 30px;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 40%;">빗살 무늬 사용</div>
+      </div>
+      <div class="progress mb-2" style="height: 30px;">
+        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 40%;">빗살 무늬 사용</div>
+      </div>
+      <br><br>
+
+    </div>    
+
+    <br><hr><br>
+
+    <div>
+      <h3>하나의 프로그레스 바에 여러 개의 진행율 표시하기</h3>
+      <!-- 부모 div 하나를 사용하고 자식 div 를 여러개 입력하고, 자식 div의 width 총합이 100% 가 넘지 않도록 설정하여 사용함 -->
+      
+      <div class="progress" style="height: 30px;">
+        <div class="progress-bar bg-secondary" style="width: 10%;">OS</div>
+        <div class="progress-bar" style="width: 30%;">사진</div>
+        <div class="progress-bar bg-success" style="width: 20%;">영상</div>
+        <div class="progress-bar bg-info" style="width: 10%;">앱</div>
+        <div class="progress-bar text-bg-light progress-bar-striped" style="width: 30%;">여유 공간</div>
+      </div>
+    </div>
+
+    <br><hr><br>
+
+    <h2>스피너 사용하기</h2>
+    <div>
+      <h3>기본 스피너</h3>
+      <!-- div 태그의 class에 .spinner-border 를 추가하여 사용함 -->
+      <!-- div 태그의 class에 .text-{테마컬러} 를 추가하여 테마 컬러를 적용할 수 있음-->
+      <!-- div 태그의 class에 .spinner-grow 를 대신 사용하여 모양을 변경할 수 있음 -->
+      <!-- div 태그의 class에 .spinner-border-sm, .spinner-grow-sm 을 추가하여 작은 모양의 스피너를 사용할 수 있음 -->
+
+      <div class="spinner-border"></div>
+      <div class="spinner-border text-primary"></div>
+      <div class="spinner-border text-secondary"></div>
+      <div class="spinner-border text-success"></div>
+      <div class="spinner-border text-info"></div>
+      <div class="spinner-border text-warning"></div>
+      <div class="spinner-border text-danger"></div>
+      <div class="spinner-border text-light"></div>
+      <div class="spinner-border text-dark"></div>
+      <div class="spinner-grow"></div>
+      <div class="spinner-border spinner-border-sm text-primary"></div>
+      <div class="spinner-grow spinner-grow-sm text-primary"></div>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>버튼 안에 스피너 넣기</h3>
+      <!-- button 태그의 자식 태그로 span 태그를 사용하고, class에 .spinner-border, .spinner-grow 를 추가하여 버튼 안에 스피너를 넣어서 사용할 수 있음 -->
+
+      <button type="button" class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span>
+      </button>
+      <button type="button" class="btn btn-primary">
+        <span class="spinner-grow spinner-grow-sm"></span>
+        로드 중...
+      </button>
+
+      <!-- 실제 사용 예시 -->
+      <button type="button" class="btn btn-primary" id="btn-download">다운로드</button>
+
+      <!-- jquery 로드 -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          //id 속성 값이 btn-download 인 태그를 마우스로 클릭했을 경우 이벤트 발생
+          $("#btn-download").on("click", function() {
+            //지정한 html 태그에 disabled 속성 추가
+            $("#btn-download").attr("disabled", true);
+            //지정한 html 태그에 자식 태그로 html 태그를 입력
+            $("#btn-download").html("<span class='spinner-border spinner-border-sm'></span> 다운로드 중 ..");
+
+            //타이머 설정, 5초 후 타이머 동작, 1/1000 초로 동작(1초 = 1,000)
+            setTimeout( function() {
+              //지정한 html 태그에 disabled 속성 제거
+              $("#btn-download").attr("disabled", false);
+              //지정한 html 태그에 자식 태그로 html 태그를 입력(=변경)
+              $("#btn-download").html("다운로드");
+            }, 5000);
+          });
+        });
+      </script>
+
+    </div>
+
+    <br><hr><br>
+
+    <h2>Pagination</h2>
+
+    <div>
+      <h3>기본 pagination</h3>
+      <!-- 게시판 아래에 존재하는 페이지 네비게이션 바를 부트스트랩에서 디자인하여 제공 -->
+      <!-- ul 태그의 class에 .pagination 을 추가하여 사용 -->
+      <!-- 자식 태그인 li의 class에 .page-item 을 추가하여 사용 -->
+      <!-- li 태그의 자식 태그인 a 의 class에 .page-link를 추가하여 사용함 -->
+
+      <ul class="pagination">
+        <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+      </ul>
+      <!-- &laquo;, &raquo; > 인터넷에 html 특수기호 검색 후 문자표현 복사 -->
+    
+    </div>
+    
+    <br><hr><br>
+
+    <div>
+      <h3>pagination 크기 설정, 위치 정렬, 활성/비활성</h3>
+      <!-- 크기는 ul 태그의 class에 .pagination-lg, .pagination-sm 을 추가하여 설정 -->
+      <!-- 정렬은 ul 태그의 class에 .justify-content-{정렬방향} 을 추가하여 설정 -->
+      <!-- .justify-content-start(기본값), .justify-content-center, .justify-content-end 만 사용 가능 -->
+      <!-- 활성/비활성은 li 태그의 class에 .active, .disabled 를 추가하여 사용함 -->
+
+      <ul class="pagination pagination-lg">
+        <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+      </ul>
+
+      <br><br>
+
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+      </ul>
+
+      <br><br>
+
+      <ul class="pagination pagination-sm justify-content-end">
+        <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+      </ul>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>breadcrumb</h3>
+      <!-- breadcrumb 은 pagination의 일종으로 현재 페이지의 위치를 알려주는데 사용 -->
+      <!-- ul 태그의 class에 .breadcrumb 를 추가하여 사용 -->
+      <!-- ul 태그의 자식 태그인 li의 class에 .breadcrumb-item 을 추가하여 사용 -->
+    
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Photos</a></li>
+        <li class="breadcrumb-item"><a href="#">여름</a></li>
+        <li class="breadcrumb-item"><a href="#">제주도</a></li>
+        <li class="breadcrumb-item active">우도</li>
+      </ul>  
+    </div>
+    
+
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

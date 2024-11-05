@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면 크기에 상관없이 중앙에 배치하기</title>
+
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* body 태그의 배경에 이미지 사용, 이미지 반복 안함, 이미지 위치 좌측 상단, 휠과 상관없이 배경 고정 */
+            background: url("../study07/images/KakaoTalk_20240429_153143137.jpg") no-repeat left top fixed;
+            /* 배경 이미지가 화면 전체크기로 나옴*/
+            background-size: cover;
+            /* 플렉스 박스 사용*/
+            display: flex;
+            /* 플렉스 박스 사용 시 자식 태그의 가로 중앙 정렬*/
+            justify-content: center;
+            /* 플렉스 박스 사용 시 자식 태그의 세로 중앙 정렬*/
+            align-items: center;
+            /* 최소 높이 설정, 디바이스에서 보이는 높이 그대로 100%(view-height)*/
+            /* min-height 미 설정 시 body 태그의 높이가 컨텐츠의 크기(자식 태그의 높이)로 고정됨*/
+            min-height: 100vh;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 1em 2em;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button">클릭!!</button>
+</body>
+</html>

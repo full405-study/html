@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        #div01 .translate-x-right:hover {
+            transform: translateX(100px);
+        }
+
+        #div01 .translate-y-bottom:hover {
+            transform: translateY(100px);
+        }
+
+        #div01 .translate-xy-right-bottom:hover {
+            transform: translate(100px, 100px);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2>transform</h2>
+
+        <div id="div01">
+            <h3>translate(), translateX(), translateY()</h3>
+
+            <div class="box red translate-x-right"></div>
+            <div class="box green translate-y-bottom"></div>
+            <div class="box blue translate-xy-right-bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
